@@ -1,0 +1,72 @@
+{% from 'macros/helpers.html' import sprite %}
+<footer class="site-footer">
+	
+	<div class="content-wrapper">
+
+		<section class="site-footer__menu">
+			<nav class="nav nav--footer">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#">Minuba</a>
+						<ul class="nav__list">
+							<li class="nav__item"><a href="#">Funktioner</a></li>
+							<li class="nav__item"><a href="#">Brancher</a></li>
+							<li class="nav__item"><a href="#">Pris</a></li>
+							<li class="nav__item"><a href="#">Nyheder</a></li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a href="#">Support</a>
+						<ul class="nav__list">
+							<li class="nav__item"><a href="#">Hjælpecenter</a></li>
+							<li class="nav__item"><a href="#">FAQ</a></li>
+							<li class="nav__item"><a href="#">Udvikler</a></li>
+							<li class="nav__item"><a href="#">Spørg os</a></li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a href="#">Om os</a>
+						<ul class="nav__list">
+							<li class="nav__item"><a href="#">Om Minuba A/S</a></li>
+							<li class="nav__item"><a href="#">Jobs</a></li>
+							<li class="nav__item"><a href="#">Pressekit</a></li>
+							<li class="nav__item"><a href="#">Kontakt</a></li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a href="#">Mere info</a>
+						<ul class="nav__list">
+							<li class="nav__item"><a href="#">Sikkerhed</a></li>
+							<li class="nav__item"><a href="#">Privatliv</a></li>
+							<li class="nav__item"><a href="#">Vilkår</a></li>
+							<li class="nav__item"><a href="#">Status</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</nav>
+		</section>
+
+
+		<section class="site-footer__contact">
+
+			<h1 class="title">
+				{{sprite('minuba', '0 0 500 182', 'site-footer__title__sprite')}}
+			</h1>
+
+			<addr>
+				Diplomvej 381<br>
+				DK-2800 Kgs. Lyngby<br>
+				Denmark<br>
+				<br>
+				+45 7070 2037<br>
+				<a href="mailto:info@minuba.dk">info@minuba.dk</a>
+			</addr>
+
+
+ 			{% include "shared/social.html" %}
+		</section>
+
+
+	</div>
+</header>

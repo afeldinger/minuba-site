@@ -1,0 +1,120 @@
+
+.nav__list {
+	display:block;
+	margin:0;
+	padding:0;
+	list-style:none;
+
+
+	a {
+		display:block;
+		text-decoration: none;
+		@include rem-value(font-size, $font-size-sm);
+	}
+}
+
+.nav__item {
+	display:block;
+	margin:0;
+	padding:0;
+}
+
+
+// Modifiers
+
+.nav--primary {
+	.nav__item {
+		a {
+			@include rem-value(font-size, $font-size-xl);
+			@include rem-value(padding, 10px, $content-margin);
+			text-transform: uppercase;
+
+			&:hover {
+				background-color: darken($color-light-gray, 4%);
+			}
+		}
+	}
+
+	 > .nav__list > .nav__item {
+	 	opacity: 0;
+	 	transform: translateX(-25%);
+	 }
+
+	.nav__separator {
+		@include rem-value(margin-top, 20px);
+	}
+}
+
+.nav--footer {
+	> .nav__list {
+		> .nav__item {
+			margin-bottom: 2em;
+			&:last-of-type {
+				margin-top: 0;
+			}
+
+			> a {
+				text-transform: uppercase;
+			}
+
+			> .nav__list {
+				@include rem-value(margin-top, $base-unit);
+			}
+		}
+	}
+}
+
+.menu--state-open {
+	.nav--primary > .nav__list > .nav__item {
+		opacity: 1;
+		transform: translateX(0);
+		transition: transform $duration-medium $ease-in-out-quad, opacity $duration-fast;
+
+
+		@for $i from 1 through 10 {
+		  &:nth-of-type(#{$i}) {
+		  	transition-delay: #{.2 + $i * .1}s;
+		  }
+		    
+		}
+
+
+	}
+}
+
+@include breakpoint($grid-md) {
+	.nav--primary {
+		
+		.nav__item {
+			display:inline;
+			float:left;
+			@include rem-value(margin-left, 14px);
+
+			a {
+				padding: 0;
+				@include rem-value(font-size, $font-size-sm);
+
+				&:hover {
+					background-color: inherit;
+				}
+			}
+		}
+
+ 		> .nav__list > .nav__item {
+			opacity: 1;
+			transform: translateX(0);
+			
+			a {
+				transition: none;
+			}
+		}
+
+		.nav__separator {
+			margin-top: 0;
+			@include rem-value(margin-left, 28px);
+		}
+	}
+
+
+
+}

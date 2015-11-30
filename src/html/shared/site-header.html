@@ -1,0 +1,25 @@
+{% from 'macros/helpers.html' import sprite %}
+<header class="site-header">
+	
+
+	<a class="site-header__logo" href="http://www.minuba.com">{{sprite('minuba', '0 0 500 182', 'site-header__logo__sprite')}}</a>
+
+	<h1 class="site-header__title">Minuba</h1>
+
+	<div class="site-header__menu">
+		<a href="#toggle-nav" class="site-header__menu__toggle"><span>Vis / Skjul navigation</span></a>
+		<div class="site-header__menu__content">
+			<nav class="nav nav--primary">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#">Funktioner</a></li>
+					<li class="nav__item"><a href="#">Brancher</a></li>
+					<li class="nav__item"><a href="#">Pris</a></li>
+					<li class="nav__item"><a href="#">Support</a></li>
+					<li class="nav__item"><a href="#">Nyheder</a></li>
+					<li class="nav__item nav__separator"><a href="#">Log ind</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	
+</header>

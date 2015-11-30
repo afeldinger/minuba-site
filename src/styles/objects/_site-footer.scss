@@ -1,0 +1,100 @@
+
+.site-footer {
+	
+	@include rem-value(font-size, $font-size-sm);
+	line-height: $line-height-sm;
+	
+	color: $color-white;
+	background: $color-dark-gray;
+
+	position:relative;
+
+	.content-wrapper {
+		@include container($grid-lg);
+		@extend %content-wrapper;
+
+		@include rem-value(padding-top, $content-padding-v);
+		@include rem-value(padding-bottom, $content-padding-v);
+	}
+}
+
+
+.site-footer__contact,
+.site-footer__menu {
+	&:nth-of-type(n+2) {
+		@include rem-value(margin-top, $content-padding-v);
+	}
+}
+
+.site-footer__contact {
+
+	.title {
+		margin-top:0;
+		@include rem-value(margin-bottom, $base-unit);
+	}
+
+	.social {
+		margin-top: 1rem;
+	}
+}
+
+
+.site-footer__title__sprite {
+	display:block;
+	clear:both;
+	width: 90px;
+	height: 32px;
+}
+
+
+
+.site-footer__menu {
+
+	.nav > .nav__list > .nav__item {
+		@include span(1 of 2)
+
+		&:nth-of-type(2n) {
+			@include span(last 1 of 2)
+		}
+	}
+}
+
+
+@include breakpoint($grid-md) {
+
+	.site-footer__contact,
+	.site-footer__menu {
+		&:nth-of-type(n+2) {
+			margin-top: 0;
+		}
+	}
+
+	.site-footer__contact {
+		@include span(2 of 6);
+
+
+		.title {
+			margin-top: -13px;
+		}
+
+	}
+
+	.site-footer__menu {
+		@include span(last 4 of 6);
+
+		.nav > .nav__list > .nav__item {
+			&,
+			&:nth-of-type(2n) {
+				@include span(1 of 4)
+			}
+
+			&:nth-of-type(4n) {
+				@include span(last 1 of 4)
+			}
+		}
+	}
+	
+}
+@include breakpoint($grid-lg) {
+
+}

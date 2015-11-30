@@ -1,0 +1,11 @@
+//
+
+a {
+	color: inherit;
+	transition-duration: $duration-fast;
+	transition-property: color background;
+
+	&:hover {
+		color: $color-minuba-secondary;
+	}
+}
