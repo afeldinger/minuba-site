@@ -6,7 +6,7 @@
     "node": "5.1.0",
     "npm": "3.3.12"
   },
-  "homepage": "http://www.minuba.com",
+  "homepage": "http://afeldinger.github.io/minuba-site/",
   "repository": {
     "type": "git",
     "url": "git://github.com/vigetlabs/gulp-starter.git"
