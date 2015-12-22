@@ -8,9 +8,8 @@ html {
 
 html,
 body {
-	overflow-x: hidden;
-	overflow-y: auto;
 	text-rendering: optimizeLegibility;
+
 }
 html {
 	-webkit-overflow-scrolling: touch;
@@ -18,16 +17,11 @@ html {
 }
 
 body {
-	background: $color-light-gray;
-}
-
-%content-wrapper,
-.content-wrapper {
-	display:block;
-	max-width: $grid-lg;
-	margin-left: auto;
-	margin-right: auto;
-	@include rem-value(padding, 0, $content-margin);
+	background: $color-tonal-gray-1;
 }
 
 
+img {
+	max-width:100%;
+	height: auto;
+}

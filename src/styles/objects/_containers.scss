@@ -1,0 +1,30 @@
+
+
+%content-wrapper,
+.content-wrapper {
+	display:block;
+	max-width: $grid-lg;
+	margin-left: auto;
+	margin-right: auto;
+	@include rem-value(padding-left, $content-margin);
+	@include rem-value(padding-right, $content-margin);
+}
+
+
+%block {
+	@include rem-value(padding-top, .5 * $content-padding-v);
+	@include rem-value(padding-bottom, .5 * $content-padding-v);
+
+	> *:first-child {
+		margin-top: 0;
+	}
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	@include breakpoint($grid-md) {
+		@include rem-value(padding-top, $content-padding-v);
+		@include rem-value(padding-bottom, $content-padding-v);
+	}
+
+}

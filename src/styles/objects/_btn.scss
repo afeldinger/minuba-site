@@ -1,0 +1,140 @@
+/**
+* Buttons
+*
+* @section Objects
+* @author ljd
+*/
+
+// Style guide variables
+$btn-color-primary: $color-minuba-secondary;
+$btn-color-secondary: $color-white;
+
+$btn-border-width: 0px;
+
+$btn-min-width-default: 200px;
+$btn-min-width-small: 160px;
+
+$btn-height-default: 50px;
+$btn-height-small: 35px;
+
+$btn-type-size-default: 20px;
+$btn-type-size-small: 18px;
+
+$btn-padding-default: 45px;
+$btn-padding-small: 30px;
+
+$btn-line-height-default: $btn-height-default - (2*$btn-border-width);
+$btn-line-height-small: $btn-height-small - (2*$btn-border-width);
+
+
+@mixin btn-color($text, $fill, $border, $secondary: false) {
+	
+	color: $text;
+	background: $fill;
+	border-color: $border;
+
+	&:active,
+	&:focus,
+	&:hover  {
+		color: $text;
+		text-decoration: none;
+
+		background: darken($fill, 10%);
+
+		@if $secondary == true {
+			border-color: $border;
+		} @else {
+			border-color: darken($border, 10%);
+		}
+	}
+}
+
+
+.btn {
+	display: block;
+	overflow: hidden;
+
+	position: relative;
+
+	margin: 0;
+	padding: 0 $btn-padding-default;
+	height: $btn-height-default;
+	min-width: $btn-min-width-default;
+
+	font-family: $font-stack-body;
+	font-size: $btn-type-size-default;
+	@include rem-value(font-size, $font-size-xl);
+	font-weight: $weight-light;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	line-height: $btn-line-height-default;
+	text-decoration: none;
+
+	cursor: pointer;
+
+	border-radius: $border-radius;
+	border-width: $btn-border-width;
+	border-style: solid;
+
+
+	transition-duration: $duration-fast;
+
+	@include btn-color($btn-color-secondary, $btn-color-primary, $btn-color-primary);
+
+	.icon {
+		line-height: $btn-line-height-default;
+	}
+}
+
+
+// Modifiers
+
+.btn--small {
+	padding: 0 $btn-padding-small;
+	height: $btn-height-small;
+	min-width: $btn-min-width-small;
+
+	font-size: $btn-type-size-small;
+	line-height: $btn-line-height-small;
+
+	border-radius: $border-radius-small;
+
+	.icon {
+		line-height: $btn-line-height-small;
+	}
+}
+
+
+.btn--block {
+	display: block;
+}
+
+.btn--centered {
+	text-align: center;
+	.btn {
+		display: block;
+	}
+	.btn + .btn {
+		margin-top: 1em;
+	}
+}
+
+
+@include breakpoint($grid-sm) {
+	.btn {
+		display: inline-block;
+	}
+	.btn--centered {
+		.btn {
+			display: inline-block;
+		}
+
+		.btn + .btn {
+			margin-top: 0;
+			margin-left: 30px;
+		}
+	}
+}
+
+

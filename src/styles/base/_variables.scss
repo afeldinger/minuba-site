@@ -8,7 +8,8 @@ $font-stack-body: $font-stack-klavika;
 
 
 // Font sizes
-$font-size-xxl: 42px;
+$font-size-xxl: 32px;
+$font-size-xxl-lg: 42px;
 $font-size-xl: 24px;
 $font-size-lg: 21px;
 $font-size-md: 18px;
@@ -23,6 +24,10 @@ $line-height-lg: 1.33em;
 $line-height-md: 1.2em;
 $line-height-sm: normal;
 
+// Font weights
+$weight-bold: 600;
+$weight-normal: 400;
+$weight-light: 200;
 
 // Brand colors
 $color-minuba-primary: #852240;
@@ -30,10 +35,17 @@ $color-minuba-secondary: #ea8d1c;
 
 // General colors
 $color-white: #fff;
-$color-light-gray: #f8f8f8;
-$color-gray: #706e6b;
-$color-dark-gray: #373737;
-$color-darker-gray: #595855;
+$color-dark-purple: 	#390c19;
+
+$color-baby-blue:		#d7e7ec;
+$color-steel-blue:		#73808e;
+
+$color-tonal-gray-1: 	#f8f8f8;
+$color-tonal-gray-2: 	#f8f8f8;
+$color-tonal-gray-3: 	#706e6b;
+$color-tonal-gray-4: 	#373737;
+$color-tonal-gray-5: 	#595855;
+
 
 // Social colors
 $color-facebook: #3b5998;
@@ -44,11 +56,12 @@ $color-youtube: #bb0000;
 $color-linkedin: #517fa4;
 
 // Color aliases
-$color-text-header: $color-gray;
-$color-text-body: $color-dark-gray;
+$color-text-header: $color-tonal-gray-3;
+$color-text-body: $color-tonal-gray-4;
 
 // Corners
 $border-radius: 4px;
+$border-radius-small: 4px;
 
 // z-indexes
 $z-index-header: 200;
@@ -78,7 +91,7 @@ $container-lg: $site-max-width;
 
 $grid-xs:  280px / $font-size-md * 1rem;
 $grid-sm:  480px / $font-size-md * 1rem;
-$grid-md:  650px / $font-size-md * 1rem;
+$grid-md:  680px / $font-size-md * 1rem;
 $grid-lg: 1000px / $font-size-md * 1rem;
 
 

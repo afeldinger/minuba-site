@@ -1,15 +1,74 @@
-{#
-  Nunjucks Templating!
-  Homepage: https://mozilla.github.io/nunjucks/
-  Docs: https://mozilla.github.io/nunjucks/api.html
-#}
 
 {% extends 'layouts/page.html' %}
 
 {% block content %}
-	{% include 'shared/section__hero.html' %}
+	{% include 'objects/hero.html' %}
 
-	test
+		
+
+	<section class="banner banner--text-left color--steel-blue">
+		<div class="container">
+
+			<figure class="banner__img">
+				<img src="/assets/images/samples/worker-time01.jpg" alt="Sample image" />
+			</figure>
+
+			<div class="banner__content">
+				<h1>Lorem ipsum dolor sit amet consectetur</h1>
+				<p>
+					Etiam sed sagittis ligula. Ut rutrum eget ex at finibus. 
+					Fusce nibh justo, tristique et convallis id, mattis in lorem. 
+					Curabitur dapibus ut nibh sit amet ultrices. 
+				</p>
+				<div class="banner__btn">
+					<a href="#free-trial" class="btn">Gratis demo</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="banner banner--text-right color--baby-blue">
+		<div class="container">
+
+			<figure class="banner__img">
+				<img src="/assets/images/samples/worker-time01.jpg" alt="Sample image" />
+			</figure>
+
+			<div class="banner__content">
+				<h1>Lorem ipsum dolor sit amet consectetur</h1>
+				<p>
+					Etiam sed sagittis ligula. Ut rutrum eget ex at finibus. 
+					Fusce nibh justo, tristique et convallis id, mattis in lorem. 
+					Curabitur dapibus ut nibh sit amet ultrices. 
+				</p>
+				<div class="banner__btn">
+					<a href="#free-trial" class="btn">Gratis demo</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="banner color--dark-purple">
+		<div class="container">
+
+			<div class="banner__content">
+				<h1>Lorem ipsum dolor sit amet consectetur</h1>
+				<p>
+					Etiam sed sagittis ligula. Ut rutrum eget ex at finibus. 
+					Fusce nibh justo, tristique et convallis id, mattis in lorem. 
+					Curabitur dapibus ut nibh sit amet ultrices. 
+				</p>
+				<div class="banner__btn">
+					<a href="#free-trial" class="btn">Gratis demo</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
 
 {% endblock %}
 

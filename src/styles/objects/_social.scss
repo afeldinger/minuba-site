@@ -1,18 +1,65 @@
 
-.social {
-	.social__item {
-		display:inline;
-		float:left;
+.social__links {
 
-		&:nth-of-type(n+2) {
-			margin-left: 5px;
-		}
-/*
-		&:hover {
-			.sprite--facebook {
-				color: $color-facebook;
-			}
-		}
-*/
+}
+
+.social__item {
+	display:inline-block;
+
+
+	color: $color-text-body;
+
+	&:nth-of-type(n+2) {
+		margin-left: 5px;
 	}
+/*
+	&:hover {
+		.sprite--facebook {
+			color: $color-facebook;
+		}
+	}
+*/
+}
+
+.social--inverse {
+	.social__item {
+		color: $color-white;
+	}
+}
+
+.social--circles {
+	.social__item {
+		position: relative;
+
+		@include rem-value(width, 28px);
+		@include rem-value(height, 28px);
+
+		@include rem-value(border-radius, 14px);
+
+		background: $color-text-body;
+		color: $color-white;
+
+		opacity: .4;
+
+		.sprite {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -.5em;
+			margin-top: -.5em;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+
+	&.social--inverse {
+		.social__item {
+			background: $color-white;
+			color: $color-text-body;
+		}
+	}
+
 }

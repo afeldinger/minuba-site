@@ -1,18 +1,16 @@
 
 .site-footer {
-	
 	@include rem-value(font-size, $font-size-sm);
+	text-align: center;
 	line-height: $line-height-sm;
 	
 	color: $color-white;
-	background: $color-dark-gray;
+	background: $color-tonal-gray-4;
 
 	position:relative;
 
 	.content-wrapper {
 		@include container($grid-lg);
-		@extend %content-wrapper;
-
 		@include rem-value(padding-top, $content-padding-v);
 		@include rem-value(padding-bottom, $content-padding-v);
 	}
@@ -22,7 +20,7 @@
 .site-footer__contact,
 .site-footer__menu {
 	&:nth-of-type(n+2) {
-		@include rem-value(margin-top, $content-padding-v);
+		@include rem-value(margin-top, .5 * $content-padding-v);
 	}
 }
 
@@ -33,14 +31,21 @@
 		@include rem-value(margin-bottom, $base-unit);
 	}
 
-	.social {
+	.social__links {
 		margin-top: 1rem;
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
 
+.site-footer__menu {
+	overflow: hidden;
+}
 
 .site-footer__title__sprite {
-	display:block;
+	display:inline-block;
 	clear:both;
 	width: 90px;
 	height: 32px;
@@ -60,27 +65,10 @@
 }
 
 
-@include breakpoint($grid-md) {
+@include breakpoint($grid-sm) {
 
-	.site-footer__contact,
-	.site-footer__menu {
-		&:nth-of-type(n+2) {
-			margin-top: 0;
-		}
-	}
-
-	.site-footer__contact {
-		@include span(2 of 6);
-
-
-		.title {
-			margin-top: -13px;
-		}
-
-	}
 
 	.site-footer__menu {
-		@include span(last 4 of 6);
 
 		.nav > .nav__list > .nav__item {
 			&,
@@ -95,6 +83,29 @@
 	}
 	
 }
-@include breakpoint($grid-lg) {
+@include breakpoint($grid-md) {
 
+	.site-footer {
+		text-align: left;
+	}
+
+	.site-footer__contact,
+	.site-footer__menu {
+		&:nth-of-type(n+2) {
+			margin-top: 0;
+		}
+	}
+
+	.site-footer__contact {
+		@include span(2 of 6);
+
+		.title {
+			margin-top: -24px;
+		}
+
+	}
+
+	.site-footer__menu {
+		@include span(last 4 of 6);
+	}
 }

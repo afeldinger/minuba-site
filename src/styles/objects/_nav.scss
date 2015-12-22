@@ -30,7 +30,7 @@
 			text-transform: uppercase;
 
 			&:hover {
-				background-color: darken($color-light-gray, 4%);
+				background-color: darken($color-tonal-gray-1, 4%);
 			}
 		}
 	}
@@ -38,6 +38,17 @@
 	 > .nav__list > .nav__item {
 	 	opacity: 0;
 	 	transform: translateX(-25%);
+/*
+	 	> .nav__list > .nav__item {
+	 		a {
+				@include rem-value(font-size, $font-size-md);
+				@include rem-value(padding, 10px, $content-margin, 10px, 2 * $content-margin);
+	 		}
+	 	}
+*/
+		> .nav__list {
+			display: none;
+		}
 	 }
 
 	.nav__separator {
@@ -88,14 +99,17 @@
 		.nav__item {
 			display:inline;
 			float:left;
-			@include rem-value(margin-left, 14px);
 
 			a {
-				padding: 0;
+				
+				padding: 6px 8px;
 				@include rem-value(font-size, $font-size-sm);
+				border-radius: $border-radius;
+
+				transition-property: color, background-color;
 
 				&:hover {
-					background-color: inherit;
+					background-color: $color-tonal-gray-1;
 				}
 			}
 		}
@@ -105,7 +119,39 @@
 			transform: translateX(0);
 			
 			a {
-				transition: none;
+				transition-property: color;
+			}
+
+			> .nav__list {
+				display: none;
+				position: absolute;
+				top: 100%;
+				min-width: 140px;
+				max-width: 160%;
+				padding: $base-unit 0;
+
+				background: $color-tonal-gray-1;
+				border-radius: 0 0 $border-radius $border-radius;
+
+				.nav__item {
+					float:none;
+				}
+				a {
+					color: inherit;
+					border-radius: 0;
+					&:hover {
+						background-color: darken($color-tonal-gray-1, 10%);
+					}
+				}
+			}
+
+			&:hover {
+				a {
+					background: $color-tonal-gray-1;
+				}
+				> .nav__list {
+					display:block !important;
+				}
 			}
 		}
 
