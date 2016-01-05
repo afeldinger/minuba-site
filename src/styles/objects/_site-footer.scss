@@ -9,13 +9,14 @@
 
 	position:relative;
 
-	.content-wrapper {
-		@include container($grid-lg);
-		@include rem-value(padding-top, $content-padding-v);
-		@include rem-value(padding-bottom, $content-padding-v);
-	}
 }
 
+.site-footer__container {
+	@include container($grid-lg);
+	@extend %content-wrapper;
+	@include rem-value(padding-top, $content-padding-v);
+	@include rem-value(padding-bottom, $content-padding-v);
+}
 
 .site-footer__contact,
 .site-footer__menu {
@@ -42,6 +43,10 @@
 
 .site-footer__menu {
 	overflow: hidden;
+}
+
+.site-footer__menu__title {
+	display:none;
 }
 
 .site-footer__title__sprite {

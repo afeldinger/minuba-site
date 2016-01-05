@@ -1,0 +1,32 @@
+
+.article {
+
+}
+
+.article__container {
+	@include container($grid-lg);
+	@extend %content-wrapper;
+	@extend %block__container;
+
+}
+
+
+@include breakpoint($grid-md) {
+
+	.article__content {
+		@include span(5 of 6 first);
+	}
+
+	.nav--section {
+		@include span(1 of 6 first);
+	}
+
+	.nav--section + .article__content {
+		@include span(5 of 6 last);
+	}
+
+	
+	
+}
+
+

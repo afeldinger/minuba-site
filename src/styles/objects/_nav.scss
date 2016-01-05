@@ -4,6 +4,7 @@
 	margin:0;
 	padding:0;
 	list-style:none;
+	line-height: $line-height-sm;
 
 
 	a {
@@ -72,6 +73,12 @@
 				@include rem-value(margin-top, $base-unit);
 			}
 		}
+	}
+}
+
+.nav--section {
+	.nav__list {
+		line-height: $line-height-xs;
 	}
 }
 

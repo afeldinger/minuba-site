@@ -5,7 +5,8 @@ a {
 	transition-duration: $duration-fast;
 	transition-property: color background;
 
-	&:hover {
+	&:hover,
+	&:active {
 		color: $color-minuba-secondary;
 	}
 }

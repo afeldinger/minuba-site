@@ -2,50 +2,53 @@
 
 	
 
-	.color--minuba-primary,
-	.color--purple {
-		background-color: $color-minuba-primary;
-	}
+.color--minuba-primary,
+.color--purple {
+	background-color: $color-minuba-primary;
+}
 
-	.color--minuba-secondary,
-	.color--orange {
-		background-color: $color-minuba-secondary;
-	}
+.color--minuba-secondary,
+.color--orange {
+	background-color: $color-minuba-secondary;
+}
 
-	.color--dark-purple {
-		background-color: $color-dark-purple;
+.color--dark-purple {
+	background-color: $color-dark-purple;
+}
+.color--baby-blue {
+	background-color: $color-baby-blue;
+	.btn {
+		@include btn-color($color-white, $color-steel-blue, $color-steel-blue, $secondary: false)
 	}
-	.color--baby-blue {
-		background-color: $color-baby-blue;
-		.btn {
-			@include btn-color($color-white, $color-steel-blue, $color-steel-blue, $secondary: false)
-		}
+}
+.color--steel-blue {
+	background-color: $color-steel-blue;
+}
+
+.color--tonal-gray-1 {
+	background-color: $color-tonal-gray-1;
+}
+
+.color--white {
+	background-color: $color-white;
+}
+
+// Set text and button colors
+.color--minuba-primary,
+.color--purple,
+.color--dark-purple,
+.color--steel-blue {
+	color: $color-white;
+
+	.btn {
+		@include btn-color($color-text-body, $color-white, $color-white, $secondary: false)
 	}
-	.color--steel-blue {
-		background-color: $color-steel-blue;
-	}
+}
 
-	
-
-	.color--tonal-gray-1 {
-		background-color: $color-tonal-gray-1;
-	}
-
-	.color--white {
-		background-color: $color-white;
-	}
-
-	.color--minuba-primary,
-	.color--purple,
-	.color--dark-purple,
-	.color--steel-blue {
-		color: $color-white;
-
-		.btn {
-			@include btn-color($color-text-body, $color-white, $color-white, $secondary: false)
-		}
-	}
-
+// Use darker text color
+.color--baby-blue {
+	color: $color-tonal-gray-4;
+}
 
 
 $color-list:
