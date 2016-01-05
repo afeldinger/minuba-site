@@ -1,5 +1,29 @@
 
+%block__container {
+	@include rem-value(padding-top, .5 * $content-padding-v);
+	@include rem-value(padding-bottom, .5 * $content-padding-v);
 
+	@include breakpoint($grid-md) {
+		@include rem-value(padding-top, $content-padding-v);
+		@include rem-value(padding-bottom, $content-padding-v);
+	}
+
+}
+
+
+%block__img {
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+
+	img {
+		display:block;
+		width:100%;
+	}
+}
+
+%block__content,
 %content-wrapper,
 .content-wrapper {
 	display:block;
@@ -11,20 +35,20 @@
 }
 
 
-%block {
-	@include rem-value(padding-top, .5 * $content-padding-v);
-	@include rem-value(padding-bottom, .5 * $content-padding-v);
-
+%block__content,
+%block__img {
 	> *:first-child {
 		margin-top: 0;
 	}
 	> *:last-child {
 		margin-bottom: 0;
 	}
+}
+
+%block__img + %block__content {
+	@include rem-value(padding-top, .5 * $content-padding-v);
 
 	@include breakpoint($grid-md) {
-		@include rem-value(padding-top, $content-padding-v);
-		@include rem-value(padding-bottom, $content-padding-v);
+		padding-top: 0;
 	}
-
 }

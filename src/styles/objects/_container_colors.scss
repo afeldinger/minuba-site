@@ -1,45 +1,44 @@
 
 
+	
 
-%color-block {
-
-	&.color--minuba-primary,
-	&.color--purple {
+	.color--minuba-primary,
+	.color--purple {
 		background-color: $color-minuba-primary;
 	}
 
-	&.color--minuba-secondary,
-	&.color--orange {
+	.color--minuba-secondary,
+	.color--orange {
 		background-color: $color-minuba-secondary;
 	}
 
-	&.color--dark-purple {
+	.color--dark-purple {
 		background-color: $color-dark-purple;
 	}
-	&.color--baby-blue {
+	.color--baby-blue {
 		background-color: $color-baby-blue;
 		.btn {
 			@include btn-color($color-white, $color-steel-blue, $color-steel-blue, $secondary: false)
 		}
 	}
-	&.color--steel-blue {
+	.color--steel-blue {
 		background-color: $color-steel-blue;
 	}
 
 	
 
-	&.color--tonal-gray-1 {
+	.color--tonal-gray-1 {
 		background-color: $color-tonal-gray-1;
 	}
 
-	&.color--white {
+	.color--white {
 		background-color: $color-white;
 	}
 
-	&.color--minuba-primary,
-	&.color--purple,
-	&.color--dark-purple,
-	&.color--steel-blue {
+	.color--minuba-primary,
+	.color--purple,
+	.color--dark-purple,
+	.color--steel-blue {
 		color: $color-white;
 
 		.btn {
@@ -47,4 +46,23 @@
 		}
 	}
 
+
+
+$color-list:
+	'minuba-primary'
+	'minuba-secondary'
+	'orange'
+	'purple'
+	'dark-purple'
+	'baby-blue'
+	'steel-blue'
+	'tonal-gray-1'
+	'white';
+
+@each $color in $color-list {
+	.color--#{$color} + .color--#{$color} {
+		%block__container {
+			padding-top: 0;
+		}
+	}
 }

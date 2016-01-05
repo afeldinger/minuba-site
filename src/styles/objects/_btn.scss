@@ -32,6 +32,7 @@ $btn-line-height-small: $btn-height-small - (2*$btn-border-width);
 	color: $text;
 	background: $fill;
 	border-color: $border;
+	text-shadow: none;
 
 	&:active,
 	&:focus,

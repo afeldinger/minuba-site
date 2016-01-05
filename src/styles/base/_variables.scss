@@ -96,7 +96,9 @@ $grid-lg: 1000px / $font-size-md * 1rem;
 
 
 $susy: (
-	global-box-sizing: border-box
+	global-box-sizing: border-box,
+	columns: 6,
+	gutters: 1/2
 );
 
 
