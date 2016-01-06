@@ -1,7 +1,19 @@
 
+/*
+@include font-face(KlavikaA, "../../assets/fonts/klavika-regular-webfont", 400);
+//@include font-face(KlavikaA, "../../assets/fonts/klavika-boldcond-webfont", 700);
+@include font-face(KlavikaA, "../../assets/fonts/klavika-light-webfont", 200);
+//@include font-face(KlavikaA, "../../assets/fonts/klavika-lightcond-webfont", 300);
+*/
+
+@include font-face(KlavikaA, "../../assets/fonts/klavika-light-webfont", 200);
+@include font-face(KlavikaA, "../../assets/fonts/klavika-lightitalic-webfont", 200, italic);
 
 @include font-face(KlavikaA, "../../assets/fonts/klavika-regular-webfont", 400);
-@include font-face(KlavikaA, "../../assets/fonts/klavika-boldcond-webfont", 700);
-@include font-face(KlavikaA, "../../assets/fonts/klavika-light-webfont", 200);
-@include font-face(KlavikaA, "../../assets/fonts/klavika-lightcond-webfont", 300);
+@include font-face(KlavikaA, "../../assets/fonts/klavika-regularitalic-webfont", 400, italic);
 
+@include font-face(KlavikaA, "../../assets/fonts/klavika-medium-webfont", 600);
+@include font-face(KlavikaA, "../../assets/fonts/klavika-mediumitalic-webfont", 600, italic);
+
+@include font-face(KlavikaA, "../../assets/fonts/klavika-bold-webfont", 700);
+@include font-face(KlavikaA, "../../assets/fonts/klavika-bolditalic-webfont", 700, italic);
