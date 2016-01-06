@@ -1,15 +1,8 @@
 
 
 .wysiwyg {
-	a {
-		color: $color-minuba-primary;	
-
-		&:hover,
-		&:active {
-			color: $color-minuba-secondary;
-		}
-		
-	}
+	@extend %formatted-text;
+	
 }
 
 .wysiwyg__media {

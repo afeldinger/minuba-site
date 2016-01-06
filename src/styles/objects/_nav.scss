@@ -5,6 +5,13 @@
 	padding:0;
 	list-style:none;
 	line-height: $line-height-sm;
+	font-weight: $weight-normal;
+}
+
+.nav__item {
+	display:block;
+	margin:0;
+	padding:0;
 
 
 	a {
@@ -12,12 +19,13 @@
 		text-decoration: none;
 		@include rem-value(font-size, $font-size-sm);
 	}
-}
 
-.nav__item {
-	display:block;
-	margin:0;
-	padding:0;
+	a.active-trail,
+	&.active-trail > a,
+	a.selected,
+	&.selected > a {
+		color: $color-minuba-primary;
+	}
 }
 
 
@@ -77,8 +85,50 @@
 }
 
 .nav--section {
+
+	margin-bottom: 2em;
+
+	.nav__title {
+		margin: 0 0 1em;
+		@include rem-value(font-size, $font-size-sm);
+		text-transform: uppercase;
+		font-weight: $weight-normal;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
 	.nav__list {
 		line-height: $line-height-xs;
+
+
+	}
+
+
+	.nav__item {
+		margin-left: -10px;
+
+
+		a {
+			display:block;
+			border-left: 2px solid transparent;
+			
+			padding: 0 0 0 8px;
+			margin: 3px 0;
+			@include rem-value(font-size, $font-size-sm);
+
+			transition-property: color, background-color;
+			&:hover {
+				background-color: $color-tonal-gray-1;
+			}
+		}
+
+		a.selected,
+		&.selected a {
+			border-left-color: $color-minuba-primary;
+		}
+
 	}
 }
 
@@ -142,14 +192,16 @@
 
 				.nav__item {
 					float:none;
-				}
-				a {
-					color: inherit;
-					border-radius: 0;
-					&:hover {
-						background-color: darken($color-tonal-gray-1, 10%);
+
+					a {
+						color: inherit;
+						border-radius: 0;
+						&:hover {
+							background-color: darken($color-tonal-gray-1, 10%);
+						}
 					}
 				}
+
 			}
 
 			&:hover {
