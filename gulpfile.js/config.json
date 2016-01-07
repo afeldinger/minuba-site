@@ -16,6 +16,7 @@
       "dest": "assets/scripts",
       "extractSharedJs": false,
       "entries": {
+        "init": ["./init.js"],
         "scripts": ["./scripts.js"]
       },
       "extensions": ["js"]
