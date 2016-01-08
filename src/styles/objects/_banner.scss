@@ -58,7 +58,7 @@
 	}
 
 	.banner__content {
-		@include rem-value(font-size, $font-size-lg);
+		//@include rem-value(font-size, $font-size-lg);
 	}
 
 	.banner__btn {
@@ -74,6 +74,14 @@
 		.banner__img + .banner__content {
 			margin-top: -0.5 * $content-padding-v;
 		}
+
+		.banner__content {	
+			p {
+				max-width: span(4 of 6);
+				margin-left: span(1 wide of 6);
+			}
+		}
+
 	}
 	
 

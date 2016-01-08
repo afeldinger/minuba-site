@@ -45,8 +45,18 @@ p {
 }
 
 h1,
+.h1 {
+	& + p,
+	& + figure,
+	& + figure + p {
+		margin-top: 1em;
+	}
+}
+
 h2,
-h3 {
+.h2,
+h3,
+.h3 {
 	& + p,
 	& + figure,
 	& + figure + p {
@@ -62,7 +72,7 @@ address {
 }
 
 
-
+.size-xl,
 .lead {
 	@include rem-value(font-size, $font-size-xl);
 	line-height: $line-height-md;

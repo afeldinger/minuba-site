@@ -41,9 +41,50 @@
 				</div>
 			</div>
 		</div>
-
 	</section>
 
+	<section class="banner color--white">
+		<div class="banner__container">
+			<div class="banner__content">
+				<h1>Lorem ipsum dolor sit amet, consectetur</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</p>
+
+				<div class="slider">
+					<ul class="slider__items">
+						<li class="slider__item">
+							<figure class="slider__image">
+								<img class="elm--shadow" src="assets/images/samples/screenshot01.jpg" alt="Screenshot">
+								<figcaption class="slider__image__caption">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="grid-list color--tonal-gray-3">
+		<div class="grid-list__container">
+			{
+				var features = [1,2,3,4,5,6,7,8,9];
+			}
+			<ul class="grid-list__items">
+				{ for n in features }
+				<li class="grid-list__item">
+					Item {{ n }}
+				</li>
+				{ endfor }
+			</ul>
+
+		</div>
+
+	</section>
 
 
 {% endblock %}
