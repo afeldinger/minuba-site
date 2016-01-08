@@ -90,10 +90,12 @@ $container-sm: 650px;
 $container-md: 940px;
 $container-lg: $site-max-width;
 
-$grid-xs:  280px / $font-size-md * 1rem;
-$grid-sm:  480px / $font-size-md * 1rem;
-$grid-md:  780px / $font-size-md * 1rem;
-$grid-lg: 1000px / $font-size-md * 1rem;
+$grid-xs:  		280px / $font-size-md * 1rem;
+$grid-sm:  		480px / $font-size-md * 1rem;
+$grid-sm-max:	779px / $font-size-md * 1rem;
+$grid-md:  		780px / $font-size-md * 1rem;
+$grid-md-max:	999px / $font-size-md * 1rem;
+$grid-lg: 		1000px / $font-size-md * 1rem;
 
 
 $susy: (

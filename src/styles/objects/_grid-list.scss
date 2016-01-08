@@ -1,0 +1,73 @@
+
+
+.grid-list {
+
+}
+
+.grid-list__container {
+	@extend %block__container;
+}
+
+.grid-list__items {
+	margin:0;
+	list-style: none;
+	@extend %block__content;
+
+}
+
+.grid-list__item {
+	margin:0;
+	padding:0;
+	@extend %strip-child-margins;
+}
+
+
+@include breakpoint($grid-sm) {
+	.grid-list__items {
+		@include container;
+	}
+}
+
+@include breakpoint($grid-sm $grid-sm-max) {
+	.grid-list__item {
+		&:nth-of-type(odd) {
+			@include span(3 of 6 first); 
+		}
+		&:nth-of-type(even) {
+			@include span(3 of 6 last); 
+		}
+		&:nth-of-type(n+3) {
+			margin-top: 2em;
+		}
+	}
+}
+
+@include breakpoint($grid-md) {
+	.grid-list__container {
+		max-width: $grid-lg;
+		margin-left: auto;
+		margin-right: auto;
+		@include rem-value(padding-left, $content-margin);
+		@include rem-value(padding-right, $content-margin);
+	}
+
+	.grid-list__items {
+			padding-left: 0;
+			padding-right: 0;
+	}
+
+	.grid-list__item {
+		&:nth-of-type(3n+1) {
+			@include span(2 of 6 first); 
+		}
+		&:nth-of-type(3n+2) {
+			@include span(2 of 6); 
+		}
+		&:nth-of-type(3n+3) {
+			@include span(2 of 6 last); 
+		}
+		&:nth-of-type(n+4) {
+			margin-top: 2em;
+		}
+	}
+}
