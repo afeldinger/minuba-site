@@ -1,0 +1,27 @@
+
+<section class="testimonials testimonials--slider color--white">
+	<div class="testimonials__container">
+			
+			<h1>Tag bare vores (kunders) ord for det!</h1>
+		
+			{%
+				set testimonials = [1,2,3,4,5]
+			%}
+			<div class="slider-wrapper">
+				<ul class="testimonials__items">
+					{% for n in testimonials %}
+					<li class="testimonials__item">
+						<h2>
+							Firma {{n}} navn
+						</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+
+
+	</div>
+</section>
