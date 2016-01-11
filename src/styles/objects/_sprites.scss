@@ -11,5 +11,9 @@
 	display:none;
 }
 
-.sprite--icon-timer {
+span[class^='sprite--minuba-icons-'],
+span[class*=' sprite--minuba-icons-'] {
+	fill: $color-minuba-primary;
+	color: $color-minuba-secondary;
 }
+
