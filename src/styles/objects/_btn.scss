@@ -12,18 +12,23 @@ $btn-color-secondary: $color-white;
 $btn-border-width: 0px;
 
 $btn-min-width-default: 200px;
-$btn-min-width-small: 160px;
+$btn-min-width-medium: 160px;
+$btn-min-width-small: 120px;
 
 $btn-height-default: 50px;
-$btn-height-small: 35px;
+$btn-height-medium: 35px;
+$btn-height-small: 28px;
 
 $btn-type-size-default: 20px;
-$btn-type-size-small: 18px;
+$btn-type-size-medium: 18px;
+$btn-type-size-small: 14px;
 
 $btn-padding-default: 45px;
-$btn-padding-small: 30px;
+$btn-padding-medium: 30px;
+$btn-padding-small: 1em;
 
 $btn-line-height-default: $btn-height-default - (2*$btn-border-width);
+$btn-line-height-medium: $btn-height-medium - (2*$btn-border-width);
 $btn-line-height-small: $btn-height-small - (2*$btn-border-width);
 
 
@@ -91,18 +96,19 @@ $btn-line-height-small: $btn-height-small - (2*$btn-border-width);
 
 // Modifiers
 
-.btn--small {
-	padding: 0 $btn-padding-small;
-	height: $btn-height-small;
-	min-width: $btn-min-width-small;
+.btn--sm,
+.btn--md {
+	padding: 0 $btn-padding-medium;
+	height: $btn-height-medium;
+	min-width: $btn-min-width-medium;
 
-	font-size: $btn-type-size-small;
-	line-height: $btn-line-height-small;
+	@include rem-value(font-size, $font-size-md);
+	line-height: $btn-line-height-medium;
 
 	border-radius: $border-radius-small;
 
 	.icon {
-		line-height: $btn-line-height-small;
+		line-height: $btn-line-height-medium;
 	}
 }
 
@@ -126,6 +132,23 @@ $btn-line-height-small: $btn-height-small - (2*$btn-border-width);
 	.btn {
 		display: inline-block;
 	}
+	
+	.btn--sm {
+		padding: 0 $btn-padding-small;
+		height: $btn-height-small;
+		min-width: $btn-min-width-small;
+
+		@include rem-value(font-size, $font-size-sm);
+		line-height: $btn-line-height-small;
+		text-align: left;
+		border-radius: $border-radius-small;
+
+		.icon {
+			line-height: $btn-line-height-small;
+		}
+	}
+
+
 	.btn--centered {
 		.btn {
 			display: inline-block;

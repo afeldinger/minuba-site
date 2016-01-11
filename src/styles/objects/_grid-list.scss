@@ -16,15 +16,44 @@
 }
 
 .grid-list__item {
-	margin:0;
+	margin:3em 0 0;
 	padding:0;
 	@extend %strip-child-margins;
+
+	@include rem-value(font-size, $font-size-sm);
+	line-height: $line-height-lg;
+
+	
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	h2 {
+		@include rem-value(font-size, $font-size-lg);
+	}
+
+	.grid-list__sprite {
+		margin-right: .5em;
+		vertical-align: middle;
+
+	}
+
+}
+
+.grid-list__sprite {
+	width: 2em;
+	height: 2em;
+	color: $color-minuba-secondary;
+	fill: $color-minuba-primary;
 }
 
 
 @include breakpoint($grid-sm) {
 	.grid-list__items {
 		@include container;
+	}
+	.grid-list__item {
+		margin-top: 0;
 	}
 }
 
@@ -37,7 +66,7 @@
 			@include span(3 of 6 last); 
 		}
 		&:nth-of-type(n+3) {
-			margin-top: 2em;
+			margin-top: 3em;
 		}
 	}
 }
@@ -67,7 +96,7 @@
 			@include span(2 of 6 last); 
 		}
 		&:nth-of-type(n+4) {
-			margin-top: 2em;
+			margin-top: 3em;
 		}
 	}
 }

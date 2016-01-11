@@ -185,10 +185,16 @@
 				top: 100%;
 				min-width: 140px;
 				max-width: 160%;
-				padding: $base-unit 0;
+				padding: 0 0 $base-unit 0;
 
+				
 				background: $color-tonal-gray-1;
 				border-radius: 0 0 $border-radius $border-radius;
+				
+				margin-left: -1px;
+				border: 1px solid $color-white;
+				border-top: 0;
+
 
 				.nav__item {
 					float:none;
@@ -196,6 +202,8 @@
 					a {
 						color: inherit;
 						border-radius: 0;
+						background-color: transparent;
+
 						&:hover {
 							background-color: darken($color-tonal-gray-1, 10%);
 						}
@@ -205,9 +213,15 @@
 			}
 
 			&:hover {
-				a {
+				> a {
 					background: $color-tonal-gray-1;
 				}
+				
+				&.nav__item--has-children > a {
+					border-radius: $border-radius $border-radius 0 0;
+					padding-bottom:10px;
+				}
+
 				> .nav__list {
 					display:block !important;
 				}
