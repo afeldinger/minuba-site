@@ -199,7 +199,11 @@ body {
 	}
 
 	.site-header__menu {
-		margin-top: 44px;
+		//margin-top: 44px;
+		margin-top:0;
+		bottom: 0;
+		position: absolute;
+		@include rem-value(right, $content-margin);
 	}
 	.site-header__menu__content {
 		display:block;

@@ -174,7 +174,17 @@
  		> .nav__list > .nav__item {
 			opacity: 1;
 			transform: translateX(0);
+			padding-bottom: 4px;
 			
+			&.nav__item--has-children {
+				padding-bottom: 0;
+			
+				> a {
+					border-radius: $border-radius $border-radius 0 0;
+					padding-bottom:10px;
+				}
+			}
+
 			a {
 				transition-property: color;
 			}
@@ -203,6 +213,7 @@
 						color: inherit;
 						border-radius: 0;
 						background-color: transparent;
+						transition-property: color, background-color;
 
 						&:hover {
 							background-color: darken($color-tonal-gray-1, 10%);
@@ -216,12 +227,6 @@
 				> a {
 					background: $color-tonal-gray-1;
 				}
-				
-				&.nav__item--has-children > a {
-					border-radius: $border-radius $border-radius 0 0;
-					padding-bottom:10px;
-				}
-
 				> .nav__list {
 					display:block !important;
 				}
