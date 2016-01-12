@@ -9,11 +9,12 @@
 	<title>{% block title %}Minuba{% endblock %}</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
--->
+
+  {% include "objects/site-favicon.html" %}
+
   <script src="assets/scripts/init.js"></script>
   <link rel="stylesheet" href="assets/styles/global.css">
+
   {% block head %}{% endblock %}
 </head>
 <body>

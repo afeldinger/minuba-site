@@ -52,6 +52,11 @@
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
+    "copystatic": {
+      "src": "static",
+      "dest": "."
+    },
+
     "fonts": {
       "src": "fonts",
       "dest": "assets/fonts",
