@@ -32,7 +32,23 @@
 		vertical-align: middle;
 
 	}
+}
 
+.testimonials__link {
+	display:block;
+	text-decoration: none;
+
+	@extend %strip-child-margins;
+
+}
+
+.testimonials__img {
+	margin: 0 0 .8em;
+}
+
+.testimonials__title {
+	margin-top: 0;
+	display:none;
 }
 
 
@@ -49,38 +65,52 @@
 		}
 	}
 
-		.testimonials__items {
-			position:relative;
-			overflow: hidden;
-		}
-		.testimonials__item {
-			margin-top: 0;
-			overflow: visible;
-			@include rem-value(padding-top, $content-margin);
-			@include rem-value(padding-bottom, $content-margin);
-			background: rgba(255,0,0,.3);
+	.testimonials__items {
+		position:relative;
+		overflow: hidden;
+	}
+	.testimonials__item {
+		margin-top: 0;
+		overflow: visible;
 
-			&:before {
-				content: '';
-				display:block;
-				position:absolute;
-				width:1px;
-				@include rem-value(top, $content-margin);
-				@include rem-value(bottom, $content-margin);
-				margin-left: gutter() / -2;
-				z-index: 5;
-				
-				
-				background: $color-tonal-gray-2;
-				background: linear-gradient(	
-			      rgba($color-tonal-gray-2, 0),
-			      rgba($color-tonal-gray-2, 1) 20%,
-			      rgba($color-tonal-gray-2, 1) 80%,
-			      rgba($color-tonal-gray-2, 0)
-			    )
+		&:before {
+			content: '';
+			display:block;
+			position:absolute;
+			width:1px;
+			@include rem-value(top, $content-margin);
+			@include rem-value(bottom, $content-margin);
+			margin-left: gutter() / -2;
+			z-index: 5;
+			
+			
+			background: $color-tonal-gray-2;
+			background: linear-gradient(	
+		      rgba($color-tonal-gray-2, 0),
+		      rgba($color-tonal-gray-2, 1) 20%,
+		      rgba($color-tonal-gray-2, 1) 80%,
+		      rgba($color-tonal-gray-2, 0)
+		    )
+		}
+	}
+
+	.testimonials__img {
+		min-height: 120px;
+		
+		.flexbox & {
+			display: flex;
+			flex-direction: column;
+			flex-align: middle;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				display:inline-block;
+				max-height: 100%;
 			}
 		}
-	
+	}
+
 
 
 	.testimonials--slider {
@@ -100,10 +130,9 @@
 
 		.testimonials__items {
 			display: flex;
-			flex-direction: horizontal;
+			flex-direction: row;
 			flex-shrink: 0;
 			flex-grow: 1;
-			flex-flow: row;
 			overflow: visible;
 			width: auto;
 
