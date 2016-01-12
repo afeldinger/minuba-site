@@ -1,9 +1,9 @@
 {
   "socialLinks": [
     {
-      "id": "twitter",
-      "title": "Twitter",
-      "url": "https://twitter.com/minuba"
+      "id": "linkedin",
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/company/minuba"
     },
     {
       "id": "facebook",
@@ -11,9 +11,9 @@
       "url": "https://www.facebook.com/minuba"
     },
     {
-      "id": "instagram",
-      "title": "Instagram",
-      "url": "https://instagram.com/minuba"
+      "id": "youtube",
+      "title": "YouTube",
+      "url": "https://www.youtube.com/channel/UCyPZG8Igel3JKrg1I63mhxw"
     }
   ]
 }
