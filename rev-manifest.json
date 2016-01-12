@@ -48,6 +48,7 @@
   "assets/fonts/klavika-regularitalic-webfont.woff": "assets/fonts/klavika-regularitalic-webfont-c4ffc9232f.woff",
   "assets/fonts/klavika-regularitalic-webfont.woff2": "assets/fonts/klavika-regularitalic-webfont-e16a157585.woff2",
   "assets/images/samples/hero01.jpg": "assets/images/samples/hero01-9b5b9877bc.jpg",
+  "assets/images/samples/logo-skjoedt.jpg": "assets/images/samples/logo-skjoedt-b3516c3ce2.jpg",
   "assets/images/samples/macbook_screenshot01.png": "assets/images/samples/macbook_screenshot01-5fbe00a71e.png",
   "assets/images/samples/screenshot01.jpg": "assets/images/samples/screenshot01-5d5ef45b0f.jpg",
   "assets/images/samples/worker-time01.jpg": "assets/images/samples/worker-time01-ca1784b871.jpg",
@@ -59,5 +60,5 @@
   "assets/images/sprites/twitter.svg": "assets/images/sprites/twitter-43498754fe.svg",
   "assets/scripts/init.js": "assets/scripts/init-2e0184594b885c07f36d.js",
   "assets/scripts/scripts.js": "assets/scripts/scripts-2e0184594b885c07f36d.js",
-  "assets/styles/global.css": "assets/styles/global-e612baa293.css"
+  "assets/styles/global.css": "assets/styles/global-16880f24a9.css"
 }
