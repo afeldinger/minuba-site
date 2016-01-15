@@ -1,1 +1,65 @@
-//
+/**
+* Form elements
+*
+* @section Generic
+* @author ljd
+*/
+form,
+label, 
+fieldset,
+input[type],
+textarea,
+select {
+	font-family: $font-stack-body;
+	box-sizing: border-box;
+}
+form,
+label, 
+fieldset {
+	display: block;
+}
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+select,
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+label[for] {
+	cursor: pointer;
+}
+input {
+	cursor: text;
+}
+input,
+select,
+textarea,
+button {
+	border: none;
+
+	color: inherit;	
+
+	background: $color-white;
+
+	outline: none;
+	border-radius: 0;
+}
+textarea {
+	min-height: $line-height-md * 4;
+	overflow: auto;
+	resize: none;
+}
+button {
+	//@include experimental(appearance, none);
+	display: inline-block;
+}
+.ph {
+	color: $color-tonal-gray-3;
+}
+// IE fixes - https://developer.mozilla.org/en-US/docs/Web/CSS/::-ms-clear
+input::-ms-clear, 
+input::-ms-reveal {
+    display: none !important;
+}

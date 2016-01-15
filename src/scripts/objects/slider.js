@@ -1,4 +1,4 @@
-/** @module objects/nav */
+/** @module objects/slider */
 /* globals $ */
 'use strict';
 

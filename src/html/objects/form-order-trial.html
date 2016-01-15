@@ -1,0 +1,57 @@
+<form>
+							
+							<div class="field">
+								<label class="field__label" for="company-name">Firmanavn</label>
+								<input class="field__input" id="company-name" type="text" name="company-name" required>
+							</div>
+							<div class="field">
+								<label class="field__label" for="full-name">Navn</label>
+								<input class="field__input" id="full-name" type="text" name="full-name" required>
+							</div>
+							<div class="form-row">
+								<div class="field size--1-2">
+									<label class="field__label" for="email">Email</label>
+									<input class="field__input" id="email" type="email" name="email" required>
+								</div>
+								<div class="field size--1-2">
+									<label class="field__label" for="phone">Telefon</label>
+									<input class="field__input" id="phone" type="tel" name="phone" required>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<div class="field size--1-2">
+									<label class="field__label" for="company-size">Firmaets størrelse</label>
+									<select class="field__select" id="company-size" name="company-size">
+			                            <option value="">Vælg</option>
+			                            <option value="1-2">1-2</option>
+			                            <option value="3-5">3-5</option>
+			                            <option value="6-10">6-10</option>
+			                            <option value="11-25">11-25</option>
+			                            <option value="26-50">26-50</option>
+			                            <option value="51-100">51-100</option>
+			                            <option value="100+">100+</option>
+			                        </select>
+								</div>
+								<div class="field size--1-2">
+									<label class="field__label" for="company-industry">Hovederhverv</label>
+									<select class="field__select" id="company-industry" name="company-industry" required>
+			                            <option value="">Vælg</option>
+			                            <option value="electrical">El-installatør</option>
+			                            <option value="plumbing">VVS-installatør</option>
+			                            <option value="alarm">Sikring (Tyveri/Brand)</option>
+			                            <option value="sewer">Kloakmester</option>
+			                            <option value="hvac">Køl og Ventilation</option>
+			                            <option value="construction">Byggeri</option>
+			                            <option value="other">andet</option>
+			                        </select>
+								</div>
+							</div>
+
+							<div class="field field--checkbox">
+								<input class="field__checkbox" id="newsletter" type="checkbox" name="newsletter">
+								<label class="field__label" for="newsletter">Jeg vil gerne modtage et nyhedsbrev fra Minuba</label>
+							</div>
+
+							<button type="submit" class="btn">Prøv Minuba</button>
+						</form>

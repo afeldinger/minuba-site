@@ -1,3 +1,6 @@
 .site-content {
 	overflow-x: hidden;
+
+	@include text-color-normal;
+
 }

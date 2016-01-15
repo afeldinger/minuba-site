@@ -5,7 +5,6 @@
 
 .article__container {
 	@include container($grid-lg);
-	@extend %content-wrapper;
 	@extend %block__container;
 
 }

@@ -72,6 +72,7 @@ address {
 }
 
 
+
 .size-xl,
 .lead {
 	@include rem-value(font-size, $font-size-xl);
@@ -79,23 +80,38 @@ address {
 }
 
 
-%formatted-text,
-.formatted-text {
-	
-	:first-child {
-		margin-top:0;
-	}
-	:last-child {
-		margin-bottom: 0;
-	}
+@mixin text-color($body-color: $color-text-body, $header-color: $color-text-header) {
+	color: $body-color;
 
 	h1,
 	.h1,
 	h2,
 	.h2 {
-		color: $color-tonal-gray-5;
+		color: $header-color;
 	}
+}
 
+@mixin text-color-light {
+	@include text-color($color-white, $color-white);
+}
+
+@mixin text-color-normal {
+	@include text-color($color-text-body, $color-tonal-gray-5);
+}
+
+@mixin text-color-dark {
+	@include text-color($color-tonal-gray-4, $color-tonal-gray-5);
+}
+
+
+@at-root {
+	//@include text-color-normal;
+}
+
+%formatted-text,
+.formatted-text {
+	
+	@extend %strip-child-margins;
 
 	a {
 		color: $color-minuba-primary;	

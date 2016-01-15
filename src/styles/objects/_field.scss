@@ -1,0 +1,223 @@
+/**
+* Field
+*
+* @section Objects
+* @author ljd
+*/
+.field {
+	margin: 0 0 $base-unit*2;
+}
+.field__label {
+	font-size: $font-size-md;
+	font-weight: 700;
+}
+.field__input {
+	display: block;
+	width: 100%;
+	padding: 0.6em 1em;
+
+	font-size: $font-size-md;
+	line-height: 1.5em;
+
+	background: $color-white;
+
+	border-radius: $border-radius;
+
+	box-shadow: inset 0 0 0 1px $color-tonal-gray-2;
+	transition: box-shadow 0.3s $ease-in-out-quad;
+
+	&:focus {
+		box-shadow: inset 0 0 0 1px $color-minuba-secondary;
+	}
+}
+.field__checkbox {
+	position: absolute;
+	top: 0;
+	right: 100%;
+
+	.no-checked &,
+	.ie--old & {
+		top: $base-unit * 5;
+		left: $base-unit;
+		z-index: 2;
+	}
+}
+.field__notification {
+	color: $color-danger;
+
+	cursor: help;
+
+	&,
+	&[title] {
+		border: none;
+	}
+}
+
+
+:not(.field__select__wrapper) .field__select {
+	width: 100%;	
+    box-shadow: none;
+    background-color: $color-white;
+	padding: 0.6em 4em 0.6em 1em;
+}
+
+.field__select__wrapper {
+
+	@extend .field__input;
+	position: relative;
+	padding: 0;
+	overflow: hidden;
+
+	&:before {
+		position:absolute;
+		content: '';
+		display:block;
+		top: 1.25em;
+		right: 1em;
+		width: 0; 
+		height: 0; 
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 6px solid $color-tonal-gray-3;
+	}
+	
+	&.focus {
+		box-shadow: inset 0 0 0 1px $color-minuba-secondary;
+	}
+
+	.field__select {
+		position:relative;
+	    width: 130%;
+	    border: none;
+	    box-shadow: none;
+	    background-color: transparent;
+	    background-image: none;
+	    appearance: none;
+	    text-indent: 0.01px;
+ 		text-overflow: "";
+
+	    &:focus {
+    		outline: none;
+	    }
+	}
+}
+
+.field + .btn {
+	margin-top: 2 * $base-unit;
+}
+
+// Modifiers
+.field--checkbox {
+	padding-top: $base-unit * 1;
+	overflow: hidden;
+
+	position: relative;
+
+	.field__label {
+		position: relative;
+		padding-left: $base-unit * 5;
+		padding-top: .2em;
+
+		min-height: $base-unit * 3;
+
+		font-size: $font-size-md;
+		line-height: $line-height-md;
+
+		&:before,
+		&:after {
+			width: $base-unit * 3;
+			height: $base-unit * 3;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+		}
+		&:before {
+			content: '';
+			display: block;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+
+			background: $color-white;
+
+			border-radius: $border-radius;
+			box-shadow: inset 0 0 0 1px $color-tonal-gray-2;
+			transition: box-shadow 0.3s $ease-in-out-quad;
+		}
+		&:after {
+			display: none;
+
+			content: '\00d7'; // Checkmark
+			font-family: monospace;
+			font-weight: bold;
+			text-align: center;
+			font-size: 1.3em;
+			line-height: $base-unit * 3.2;
+			speak: none;
+		}
+	}
+	.field__checkbox:checked ~ .field__label:after {
+		display: block;
+
+		.no-checked &,
+		.ie--old & {
+			display: none;
+		}
+	}
+	.field__checkbox:focus ~ .field__label:before {
+		box-shadow: inset 0 0 0 1px $color-minuba-secondary;
+	}
+}
+
+.field--required {
+	.field__label {
+		&:after {
+			display:inline-block;
+			content: '*';
+			margin-left: .15em;
+		}
+	}
+}
+
+.field--disabled {
+	.field__select__wrapper {
+		color: $color-tonal-gray-2;
+		&:before {
+			border-top-color: $color-tonal-gray-2;
+		}
+	}
+}
+
+.field--state-invalid {
+	.field__input {
+		box-shadow: inset 0 0 0 1px $color-danger;
+	}
+	&.field--checkbox {
+		.field__label:before {
+			box-shadow: inset 0 0 0 1px $color-danger;
+		}
+	}
+}
+.field--state-valid {
+
+}
+
+
+
+@include breakpoint($grid-md) {
+	.field__label {
+		margin-bottom: 0em;
+		margin-top: 0.1em;
+	}
+	.field--checkbox .field__label {
+		padding-top: 5px;
+	}
+	.form-block--twocol .field--checkbox {
+
+		.field__label {
+			padding-top: 0;
+		}
+	}
+}

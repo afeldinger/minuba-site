@@ -1,6 +1,7 @@
 
 .site-footer {
 	@include rem-value(font-size, $font-size-sm);
+	@extend %text-color-light;
 	text-align: center;
 	line-height: $line-height-sm;
 	

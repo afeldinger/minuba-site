@@ -1,0 +1,22 @@
+
+.block {
+
+}
+
+.block__container {
+	@extend %block__container;
+}
+
+.block__content {
+	@extend %block__content;
+}
+
+.block__img {
+	@extend %block__img;
+}
+
+
+.padded-block {
+	padding: 2em;
+	border-radius: $border-radius;
+}

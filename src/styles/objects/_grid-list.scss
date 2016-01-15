@@ -1,23 +1,26 @@
 
+.site-content > .grid-list > .grid-list {
 
-.grid-list {
-
+	& > .grid-list__container {
+		@extend %block__container;
+	}
+	
 }
 
-.grid-list__container {
-	@extend %block__container;
-}
 
 .grid-list__items {
 	margin:0;
+	padding: 0;
 	list-style: none;
-	@extend %block__content;
+	overflow: hidden;
 
 }
 
 .grid-list__item {
 	margin:3em 0 0;
 	padding:0;
+	text-align: left;
+
 	@extend %strip-child-margins;
 
 	@include rem-value(font-size, $font-size-sm);
@@ -31,18 +34,13 @@
 	h2 {
 		@include rem-value(font-size, $font-size-lg);
 	}
-
-	.grid-list__sprite {
-		margin-right: .5em;
-		vertical-align: middle;
-
-	}
-
 }
 
 .grid-list__sprite {
 	width: 2em;
 	height: 2em;
+	margin-right: .5em;
+	vertical-align: middle;
 }
 
 
@@ -70,18 +68,6 @@
 }
 
 @include breakpoint($grid-md) {
-	.grid-list__container {
-		max-width: $grid-lg;
-		margin-left: auto;
-		margin-right: auto;
-		@include rem-value(padding-left, $content-margin);
-		@include rem-value(padding-right, $content-margin);
-	}
-
-	.grid-list__items {
-			padding-left: 0;
-			padding-right: 0;
-	}
 
 	.grid-list__item {
 		&:nth-of-type(3n+1) {

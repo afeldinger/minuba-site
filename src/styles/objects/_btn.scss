@@ -59,13 +59,13 @@ $btn-line-height-small: $btn-height-small - (2*$btn-border-width);
 .btn {
 	display: block;
 	overflow: hidden;
-
 	position: relative;
 
 	margin: 0;
 	padding: 0 $btn-padding-default;
 	height: $btn-height-default;
 	min-width: $btn-min-width-default;
+	width: 100%;
 
 	font-family: $font-stack-body;
 	font-size: $btn-type-size-default;
@@ -131,6 +131,7 @@ $btn-line-height-small: $btn-height-small - (2*$btn-border-width);
 @include breakpoint($grid-sm) {
 	.btn {
 		display: inline-block;
+		width: auto;
 	}
 	
 	.btn--sm {

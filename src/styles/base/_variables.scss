@@ -35,7 +35,7 @@ $color-minuba-primary: #852240;
 $color-minuba-secondary: #ea8d1c;
 
 // General colors
-$color-white: #fff;
+$color-white: 			#fff;
 $color-dark-purple: 	#390c19;
 
 $color-baby-blue:		#d7e7ec;
@@ -47,6 +47,7 @@ $color-tonal-gray-3: 	#706e6b;
 $color-tonal-gray-4: 	#373737;
 $color-tonal-gray-5: 	#595855;
 
+$color-danger:			#ff0000;
 
 // Social colors
 $color-facebook: #3b5998;
@@ -81,6 +82,7 @@ $ease-in-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $base-unit: 10px;
 $content-margin: 20px;
 $content-padding-v: 70px;
+$content-padding-h: 70px;
 
 
 $site-min-width: 280px;

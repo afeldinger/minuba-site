@@ -1,0 +1,52 @@
+
+{% extends 'layouts/page.html' %}
+
+{% block content %}
+	
+	{% include 'objects/hero-small.html' %}
+
+	<article class="block color--tonal-gray-1">
+		<div class="block__container">
+
+
+			<div class="block__content wysiwyg">
+
+				<div class="cols">
+					<div class="col">
+						<h1>Prøv Minuba gratis i 10 dage</h1>
+						
+
+						<h3>Hvad er en effektiv arbejdsdag værd for dig?</h3>
+						<p>”Meget, rigtig meget”. Det er det svar vi oftest hører i branchen, når vi stiller spørgsmålet.</p>
+						<p>For lige omkring en rund 10’er om dagen giver Minuba dig det, der skal til at strukturere dine arbejdsprocesser, så du kan udvikle og forbedre din virksomhed.</p>
+						<h3>Er du klar til at optimere din virksomhed?</h3>
+						<ul>
+							<li>Realiser dine kunders potentiale</li>
+							<li>Planlæg dine projekter</li>
+							<li>Fokuser og målret din indsats</li>
+							<li>Få overblik over din virksomhed</li>
+							<li>Opnå højeste kvalitet</li>
+						</ul>
+					</div>
+					<div class="col padded-block color--baby-blue">
+
+						
+						{% include 'objects/form-order-trial.html' %}
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</article>
+
+
+
+
+{% endblock %}
+
+
+{% block javascript %}
+
+{% endblock %}

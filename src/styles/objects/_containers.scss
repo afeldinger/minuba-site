@@ -1,5 +1,21 @@
 
+
+
+%content-wrapper,
 %block__container {
+	display:block;
+	max-width: $grid-lg;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include rem-value(padding-left, $content-margin);
+	@include rem-value(padding-right, $content-margin);
+
+}
+
+%block__container {
+	@extend %block__container;
+
 	@include rem-value(padding-top, .5 * $content-padding-v);
 	@include rem-value(padding-bottom, .5 * $content-padding-v);
 
@@ -7,7 +23,6 @@
 		@include rem-value(padding-top, $content-padding-v);
 		@include rem-value(padding-bottom, $content-padding-v);
 	}
-
 }
 
 
@@ -27,17 +42,6 @@
 		height: auto;
 		max-height: 50vw;
 	}
-}
-
-%block__content,
-%content-wrapper,
-.content-wrapper {
-	display:block;
-	max-width: $grid-lg;
-	margin-left: auto;
-	margin-right: auto;
-	@include rem-value(padding-left, $content-margin);
-	@include rem-value(padding-right, $content-margin);
 }
 
 
