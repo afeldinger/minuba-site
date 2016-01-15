@@ -1,0 +1,55 @@
+
+{% extends 'layouts/page.html' %}
+
+{% block content %}
+		
+
+	<article class="block color--default">
+		<div class="block__container">
+
+
+			<div class="block__content wysiwyg">
+				<h1>List of articles</h1>
+				
+
+				{%
+					set features = [1,2,3,4,5,6,7,8,9]
+				%}
+				<ul class="item-list">
+					{% for n in features %}
+					<li class="item-list__item">
+						<!--
+						<figure class="item-list__img">
+							<img src="assets/images/samples/macbook_screenshot01.png" alt="Sample image" />
+						</figure>
+						-->
+						<time datetime="2015-12-12">December 12, 2015</time>
+						<h2>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</h2>
+						<ul class="tags">
+							<li class="tags__item"><a class="tag" href="#">Features</a></li>
+							<li class="tags__item"><a class="tag" href="#">Article</a></li>
+							<li class="tags__item"><a class="tag" href="#">Client work</a></li>
+						</ul>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa explicabo repellendus. Animi, odit sequi cupiditate magnam quod est nobis vitae vero in debitis aliquam possimus officia, modi, dicta iure.</p>
+						<a class="btn btn--sm" href="article.html">Læs mere</a>
+					</li>
+					{% endfor %}
+				</ul>
+
+
+			</div>
+		</div>
+
+	</article>
+
+
+
+
+{% endblock %}
+
+
+{% block javascript %}
+
+{% endblock %}

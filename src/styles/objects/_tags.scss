@@ -1,0 +1,43 @@
+
+.tags {
+	display:block;
+	margin: .8em 0;
+	width: auto;
+	padding:0;
+	list-style:none;
+	overflow:hidden;
+
+	& + p {
+		margin-top: 0;
+	}
+}
+
+.tags__item {
+	display: inline-block;
+
+	.tag {
+		display:block;
+	}
+}
+
+.tag {
+	display:inline-block;
+	background: rgba(0,0,0,.07);
+	text-decoration: none;
+	padding: .2em .5em;
+	border-radius: $border-radius;
+	@include rem-value(font-size, $font-size-sm);
+	line-height: $line-height-md;
+	white-space: nowrap;
+
+	&,
+	&:link,
+	&:visited,
+	&:hover {
+		color: inherit !important;
+	}
+
+	&:hover {
+		background: rgba(0,0,0,.2);
+	}
+}

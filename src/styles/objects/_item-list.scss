@@ -1,0 +1,38 @@
+
+.item-list {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	list-style:none;
+}
+
+.item-list__item {
+	position: relative;
+	overflow: hidden;
+
+	&:nth-of-type(n+2) {
+		margin-top: 3em;
+	}
+}
+
+.item-list__img {
+	@extend %block-img;
+
+
+}
+
+@include breakpoint($grid-md) {
+
+	.item-list__img {
+		position:absolute;
+		display:block;
+		top:0;
+		left:0;
+		width: span(2 of 6 first);
+
+		& ~ *,
+		& ~ .tags {
+			margin-left:  span(2 of 6 wide);
+		}	
+	}
+}
