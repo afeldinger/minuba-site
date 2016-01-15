@@ -22,8 +22,10 @@
 @import "objects/site-footer";
 @import "objects/nav";
 
+@import "objects/columns";
 @import "objects/grid";
 
+@import "objects/container_colors";
 @import "objects/block";
 @import "objects/banner";
 @import "objects/article";
@@ -36,6 +38,3 @@
 @import "objects/slider";
 
 @import "objects/social";
-
-
-@import "objects/container_colors";

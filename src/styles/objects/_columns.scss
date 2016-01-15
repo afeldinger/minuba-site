@@ -1,0 +1,49 @@
+
+.col {
+	@extend %strip-child-margins;
+	margin-bottom: gutter();
+}
+.col:last-of-type {
+	margin-bottom: 0;
+}
+
+
+@include breakpoint($grid-md) {
+	.cols {
+		@include container();
+	}
+
+	.col {
+		margin-bottom: 0;
+	}
+
+	:not(.cols--3) {
+		.col {
+			&:nth-of-type(odd) {
+				@include span(3 of 6 first);	
+			}
+			&:nth-of-type(even) {
+				@include span(3 of 6 last);
+			}
+			
+		}
+	}
+
+	// Modifiers
+	.cols--3 {
+		.col {
+
+			&:nth-of-type(3n + 1) {
+				@include span(2 of 6 first);
+			}
+			&:nth-of-type(3n + 2) {
+				@include span(2 of 6);
+			}
+			&:nth-of-type(3n + 3) {
+				@include span(2 of 6 last);
+			}
+			
+		}
+
+	}
+}
