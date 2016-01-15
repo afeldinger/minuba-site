@@ -13,7 +13,7 @@
 				
 
 				{%
-					set features = [1,2,3,4,5,6,7,8,9]
+					set features = [1,2,3,4,5]
 				%}
 				<ul class="item-list">
 					{% for n in features %}
@@ -39,6 +39,7 @@
 					{% endfor %}
 				</ul>
 
+				{% include 'objects/pager.html' %}
 
 			</div>
 		</div>

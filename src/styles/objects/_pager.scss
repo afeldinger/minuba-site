@@ -1,0 +1,84 @@
+
+.pager {
+	display:block;
+	margin-left: 0;
+	margin-right: 0;
+	@include rem-value(margin-top, $content-padding-v / 2);
+	@include rem-value(margin-bottom, $content-padding-v / 2);
+	padding: 0;
+	list-style:none;
+	text-align: center;
+	font-size: 0;
+
+	
+}
+
+.pager__item {
+	display: inline-block;
+	margin: 0;
+	@include rem-value(font-size, $font-size-sm);
+	line-height: $line-height-lg;
+
+	a {
+		display:block;
+		text-decoration: none;
+
+		border-radius: $border-radius;
+		background-color: $color-opacity-1-hidden;
+		padding: 0 5px;
+		min-width: $line-height-lg;
+
+		
+		&,
+		&:link,
+		&:visited,
+		&:hover {
+			color: inherit;
+		}
+		&:hover {
+			background-color: $color-opacity-1;
+		}
+	}
+}
+
+
+// Modifiers
+
+.pager__item--page {
+	.pager__item--first + &,
+	.pager__item--previous + &,
+	& + .pager__item--last,
+	& + .pager__item--next {
+		margin-left: 10px;
+	}
+}
+
+.pager__item--active {
+	a {
+		background-color: $color-opacity-1;
+	}
+}
+
+.pager__item--first a:before  {
+	display:inline-block;
+	content: '\00ab';
+	margin-right: 2px;
+}
+
+.pager__item--previous a:before {
+	display:inline-block;
+	content: '\2039';
+	margin-right: 2px;
+}
+
+.pager__item--next a:after {
+	display:inline-block;
+	content: '\203A';
+	margin-left: 2px;
+}
+
+.pager__item--last a:after {
+	display:inline-block;
+	content: '\00bb';
+	margin-left: 2px;
+}

@@ -22,7 +22,7 @@
 
 .tag {
 	display:inline-block;
-	background: rgba(0,0,0,.07);
+	background: $color-opacity-1;
 	text-decoration: none;
 	padding: .2em .5em;
 	border-radius: $border-radius;
@@ -38,6 +38,6 @@
 	}
 
 	&:hover {
-		background: rgba(0,0,0,.2);
+		background: $color-opacity-1-hover;
 	}
 }
