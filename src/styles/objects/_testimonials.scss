@@ -1,17 +1,25 @@
 
-.testimonials {
+.site-content > .grid-list > .testimonials {
 	text-align: center;
-}
 
-.testimonials__container {
-	@extend %block__container;
-	@extend %block__content;
+	& > .testimonials__container {
+		@extend %block__container;
+	}
 }
 
 .testimonials__items {
-	margin:0;
+	margin-left:0;
+	margin-right:0;
 	padding:0;
 	list-style: none;
+	text-align: center;
+}
+
+h1,
+h2 {
+	& + .testimonials__items {
+		margin-top: 0;
+	}
 }
 
 .testimonials__item {
@@ -22,7 +30,6 @@
 	@include rem-value(font-size, $font-size-sm);
 	line-height: $line-height-lg;
 
-
 	h2 {
 		@include rem-value(font-size, $font-size-lg);
 	}
@@ -31,6 +38,11 @@
 		margin-right: .5em;
 		vertical-align: middle;
 
+	}
+
+	blockquote {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
@@ -58,13 +70,7 @@
 // Breakpoints
 
 @include breakpoint($grid-sm) {
-	.testimonials:not(.testimonials--slider) {
-		
-		.testimonials__items {
-			//@include container;
-		}
-	}
-
+	
 	.testimonials__items {
 		position:relative;
 		overflow: hidden;
@@ -72,17 +78,22 @@
 	.testimonials__item {
 		margin-top: 0;
 		overflow: visible;
+		
 
-		&:before {
+		&:before,
+		&:after {
 			content: '';
 			display:block;
 			position:absolute;
+			z-index: 5;
+
+		}
+
+		&:after {
 			width:1px;
 			@include rem-value(top, $content-margin);
 			@include rem-value(bottom, $content-margin);
 			margin-left: gutter() / -2;
-			z-index: 5;
-			
 			
 			background: $color-tonal-gray-2;
 			background: linear-gradient(	
@@ -90,7 +101,23 @@
 		      rgba($color-tonal-gray-2, 1) 20%,
 		      rgba($color-tonal-gray-2, 1) 80%,
 		      rgba($color-tonal-gray-2, 0)
-		    )
+		    );
+		}
+
+		&:before {
+			height:1px;
+			@include rem-value(left, $content-margin);
+			@include rem-value(right, $content-margin);
+			margin-top: gutter() / -2;
+			
+			background: $color-tonal-gray-2;
+			background: linear-gradient(
+			  to right,
+		      rgba($color-tonal-gray-2, 0),
+		      rgba($color-tonal-gray-2, 1) 20%,
+		      rgba($color-tonal-gray-2, 1) 80%,
+		      rgba($color-tonal-gray-2, 0)
+		    );
 		}
 	}
 
@@ -154,7 +181,7 @@
 		&:nth-of-type(odd) {
 			@include span(3 of 6 first); 
 
-			&:before {
+			&:after {
 				display: none;
 			}
 		}
@@ -162,7 +189,7 @@
 			@include span(3 of 6 last); 
 		}
 		&:nth-of-type(n+3) {
-			margin-top: 3em;
+			margin-top: gutter();
 		}
 	}
 
@@ -188,7 +215,7 @@
 		&:nth-of-type(3n+1) {
 			@include span(2 of 6 first); 
 
-			&:before {
+			&:after {
 				display: none;
 			}
 		}
@@ -199,7 +226,7 @@
 			@include span(2 of 6 last); 
 		}
 		&:nth-of-type(n+4) {
-			margin-top: 3em;
+			margin-top: gutter();
 		}
 	}
 

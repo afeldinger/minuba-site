@@ -1,0 +1,26 @@
+
+<div class="slider-wrapper">
+	{%
+		set testimonials = [1,2,3,4,5]
+	%}
+	<ul class="testimonials__items">
+		{% for n in testimonials %}
+		<li class="testimonials__item">
+			<a class="testimonials__link" href="#">
+				<figure class="testimonials__img">
+					<img src="assets/images/samples/logo-skjoedt.jpg" alt="Sample logo" />
+				</figure>
+				<h2 class="testimonials__title">
+					Firma {{n}} navn
+				</h2>
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>	
+					<cite>Contact name</cite>
+				</blockquote>
+				
+			</a>
+
+		</li>
+		{% endfor %}
+	</ul>
+</div>
