@@ -18,11 +18,12 @@
 				<ul class="item-list">
 					{% for n in features %}
 					<li class="item-list__item">
-						<!--
+						
+						{% if n == 3 %}
 						<figure class="item-list__img">
 							<img src="assets/images/samples/macbook_screenshot01.png" alt="Sample image" />
 						</figure>
-						-->
+						{% endif %}
 						<time datetime="2015-12-12">December 12, 2015</time>
 						<h2>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
