@@ -1,5 +1,5 @@
 
-.site-content > .grid-list > .grid-list {
+.site-content > .feature-list {
 
 	& > .grid-list__container {
 		@extend %block__container;
@@ -8,7 +8,7 @@
 }
 
 
-.grid-list__items {
+.feature-list__items {
 	margin:0;
 	padding: 0;
 	list-style: none;
@@ -16,7 +16,7 @@
 
 }
 
-.grid-list__item {
+.feature-list__item {
 	margin:3em 0 0;
 	padding:0;
 	text-align: left;
@@ -36,7 +36,7 @@
 	}
 }
 
-.grid-list__sprite {
+.feature-list__sprite {
 	width: 2em;
 	height: 2em;
 	margin-right: .5em;
@@ -45,16 +45,16 @@
 
 
 @include breakpoint($grid-sm) {
-	.grid-list__items {
+	.feature-list__items {
 		@include container;
 	}
-	.grid-list__item {
+	.feature-list__item {
 		margin-top: 0;
 	}
 }
 
 @include breakpoint($grid-sm $grid-sm-max) {
-	.grid-list__item {
+	.feature-list__item {
 		&:nth-of-type(odd) {
 			@include span(3 of 6 first); 
 		}
@@ -69,7 +69,7 @@
 
 @include breakpoint($grid-md) {
 
-	.grid-list__item {
+	.feature-list__item {
 		&:nth-of-type(3n+1) {
 			@include span(2 of 6 first); 
 		}
