@@ -1,24 +1,24 @@
 
-.social__links {
-
+.social {
+	margin: 1em 0;
 }
+
 
 .social__item {
 	display:inline-block;
 
+	@include rem-value(font-size, $font-size-md);
 
-	color: $color-text-body;
+	&,
+	&:link,
+	&:visited {
+		color: inherit;
+	}
+	
 
 	&:nth-of-type(n+2) {
 		margin-left: 5px;
 	}
-/*
-	&:hover {
-		.sprite--facebook {
-			color: $color-facebook;
-		}
-	}
-*/
 }
 
 .social--inverse {
@@ -36,10 +36,17 @@
 
 		@include rem-value(border-radius, 14px);
 
-		background: $color-text-body;
-		color: $color-white;
+		&,
+		&:link,
+		&:visited {
+			background-color: $color-opacity-1;
+			color: inherit;
+		}
 
-		opacity: .4;
+		&:hover {
+			background-color: $color-opacity-1-hover;
+		}
+
 
 		.sprite {
 			position: absolute;
@@ -47,19 +54,26 @@
 			left: 50%;
 			margin-left: -.5em;
 			margin-top: -.5em;
-			font-size: 1.2em;
+			font-size: 1em;
 		}
 
-		&:hover {
-			opacity: 1;
-		}
 	}
 
 
 	&.social--inverse {
 		.social__item {
-			background: $color-white;
-			color: $color-text-body;
+
+			&,
+			&:link,
+			&:visited {
+				background: rgba(255,255,255,.4);
+				color: $color-tonal-gray-4;
+			}
+			
+			&:hover {
+				background: rgba(255,255,255,1);
+			}
+			
 		}
 	}
 
