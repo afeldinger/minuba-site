@@ -5,6 +5,7 @@ var open    = require('open')
 var os      = require('os')
 var package = require('../../package.json')
 var path    = require('path')
+var gutil    = require('gulp-util')
 
 var settings = {
   url: package.homepage,
@@ -15,6 +16,7 @@ var settings = {
 }
 
 var deployTask = function() {
+  gutil.log('Deploy using cache dir: ' + settings.ghPages.cacheDir);
   return gulp.src(settings.src)
     .pipe(ghPages(settings.ghPages))
     .on('end', function(){
