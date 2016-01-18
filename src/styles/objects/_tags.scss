@@ -15,7 +15,7 @@
 
 .tags__item {
 	display: inline-block;
-	margin: 0 2px 2px 0;
+	margin: 0 $pill-margin $pill-margin 0;
 
 	.tag {
 		display:block;
@@ -26,7 +26,7 @@
 	display:inline-block;
 	background: $color-opacity-1;
 	text-decoration: none;
-	padding: .2em .5em;
+	padding: $pill-padding-v $pill-padding-h;
 	border-radius: $border-radius;
 	@include rem-value(font-size, $font-size-sm);
 	line-height: $line-height-md;

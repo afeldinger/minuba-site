@@ -4,23 +4,27 @@
 {% block content %}
 		
 
-	<article class="block color--default">
+	<article class="block color--white">
 		<div class="block__container">
 
 
 			<div class="block__content wysiwyg">
-				<h1>Available pages</h1>
-				
-				<ul>
-					<li><a href="index.html">Index page</a></li>
-					<li><a href="frontpage.html">Frontpage</a></li>
-					<li><a href="blocks.html">Blocks</a></li>
-					<li><a href="article-list.html">Article list</a></li>
-					<li><a href="article.html">Article</a></li>
-					<li><a href="form.html">Form</a></li>
-					<li><a href="form-alternative.html">Form alternative</a></li>
-					<li><a href="partners.html">Partner list</a></li>
-				</ul>
+				<h1>Partner list</h1>
+
+					<div class="grid-list">
+						<nav class="list-filter grid-list__filter">
+							<ul class="list-filter__items">
+								<li class="list-filter__item"><a class="list-filter__link" href="#">VVS</a></li>
+								<li class="list-filter__item selected"><a class="list-filter__link" href="#">Tømrer</a></li>
+								<li class="list-filter__item"><a class="list-filter__link" href="#">Elektriker</a></li>
+								<li class="list-filter__item"><a class="list-filter__link" href="#">Murer</a></li>
+								<li class="list-filter__item selected"><a class="list-filter__link" href="#">Maler</a></li>
+								<li class="list-filter__item"><a class="list-filter__link" href="#">Snedker</a></li>
+							</ul>
+						</nav>
+						{% include 'objects/grid-list.html' %}
+					</div>
+				</div>
 			</div>
 		</div>
 

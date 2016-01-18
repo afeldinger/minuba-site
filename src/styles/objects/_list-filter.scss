@@ -1,0 +1,49 @@
+
+.list-filter {
+
+}
+
+.list-filter__items {
+	margin: 1.2em 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.list-filter__item {
+	display: inline-block;
+	margin: 0 $pill-margin $pill-margin 0;
+
+	@include rem-value(font-size, $font-size-md);
+
+	a {
+		display:block;
+		padding: $pill-padding-v $pill-padding-h;
+		border-radius: $border-radius;
+		text-decoration: none;
+		background-color: $color-opacity-1;
+		white-space: nowrap;
+
+		&,
+		&:link,
+		&:visited,
+		&:hover {
+			color: $color-text-body;
+		}
+
+		&:hover {
+			background-color: $color-opacity-1-hover;
+		}
+	}
+
+	&.selected a {
+		color: $color-white;
+		background-color: $color-minuba-secondary;
+
+		&:hover {
+			color: $color-text-body;
+			background-color: $color-opacity-1-hover;
+		}
+
+	}
+}

@@ -1,21 +1,48 @@
+
 	{%
-		set testimonials = [1,2,3,4,5]
+		set list_items = [
+			{
+				'title': 'Lorem ipsum',
+				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+				'tags': ['vvs', 'maler']
+			},
+			{
+				'title': 'Lorem ipsum',
+				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+				'tags': ['vvs', 'maler']
+			},
+			{
+				'title': 'Lorem ipsum',
+				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+				'tags': ['vvs', 'maler']
+			},
+			{
+				'title': 'Lorem ipsum',
+				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+				'tags': ['vvs', 'maler']
+			},
+			{
+				'title': 'Lorem ipsum',
+				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+				'tags': ['vvs', 'maler']
+			}
+		]
 	%}
 	<ul class="grid-list__items">
-		{% for n in testimonials %}
+		{% for item in list_items %}
 		<li class="grid-list__item">
 			<a class="grid-list__link" href="#">
 				<figure class="grid-list__img">
 					<img src="assets/images/samples/logo-skjoedt.jpg" alt="Sample logo" />
 				</figure>
+
 				<h2 class="grid-list__title">
-					Firma {{n}} navn
+					{{ item.title }}
 				</h2>
 				<blockquote>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>	
+					<p>{{ item.text }}</p>
 					<cite>Contact name</cite>
 				</blockquote>
-				
 			</a>
 
 		</li>

@@ -66,6 +66,9 @@ h3,
 	}
 }
 
+blockquote {
+	@extend %strip-child-margins;
+}
 
 time {
 	display:block;
