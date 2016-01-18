@@ -1,0 +1,26 @@
+
+{%
+	set companies = [
+		1,2,3,4,5
+	]
+%}
+<ul class="partner-list__items">
+	{% for n in companies %}
+	<li class="partner-list__item">
+		<a class="partner-list__link" href="#">
+			<figure class="partner-list__img">
+				<img src="assets/images/samples/logo-skjoedt.jpg" alt="Sample logo" />
+			</figure>
+			<h2 class="partner-list__title">
+				Firma {{n}} navn
+			</h2>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>	
+				<cite>Contact name</cite>
+			</blockquote>
+			
+		</a>
+
+	</li>
+	{% endfor %}
+</ul>

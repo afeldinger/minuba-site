@@ -1,13 +1,13 @@
 
-.site-content > .grid-list > .testimonials {
+.site-content > .grid-list {
 	text-align: center;
 
-	& > .testimonials__container {
+	& > .grid-list__container {
 		@extend %block__container;
 	}
 }
 
-.testimonials__items {
+.grid-list__items {
 	margin-left:0;
 	margin-right:0;
 	padding:0;
@@ -17,12 +17,12 @@
 
 h1,
 h2 {
-	& + .testimonials__items {
+	& + .grid-list__items {
 		margin-top: 0;
 	}
 }
 
-.testimonials__item {
+.grid-list__item {
 	margin:3em 0 0;
 	padding:0;
 	@extend %strip-child-margins;
@@ -34,7 +34,7 @@ h2 {
 		@include rem-value(font-size, $font-size-lg);
 	}
 
-	.testimonials__sprite {
+	.grid-list__sprite {
 		margin-right: .5em;
 		vertical-align: middle;
 
@@ -46,7 +46,7 @@ h2 {
 	}
 }
 
-.testimonials__link {
+.grid-list__link {
 	display:block;
 	text-decoration: none;
 
@@ -54,28 +54,32 @@ h2 {
 
 }
 
-.testimonials__img {
+.grid-list__img {
 	margin: 0 0 .8em;
 }
 
-.testimonials__title {
+.grid-list__title {
 	margin-top: 0;
-	display:none;
 }
 
 
 // Modifiers
 
+.grid-list--testimonials {
+	.grid-list__title {
+		display: none;
+	}
+}
 
 // Breakpoints
 
 @include breakpoint($grid-sm) {
 	
-	.testimonials__items {
+	.grid-list__items {
 		position:relative;
 		overflow: hidden;
 	}
-	.testimonials__item {
+	.grid-list__item {
 		margin-top: 0;
 		overflow: visible;
 		
@@ -121,7 +125,7 @@ h2 {
 		}
 	}
 
-	.testimonials__img {
+	.grid-list__img {
 		min-height: 120px;
 		
 		.flexbox & {
@@ -140,7 +144,7 @@ h2 {
 
 
 
-	.testimonials--slider {
+	.grid-list--slider {
 		
 		.slider-wrapper {
 			overflow: hidden;
@@ -149,13 +153,13 @@ h2 {
 			
 			@for $i from 1 through 20 {
 			  &[data-slider-state='#{$i}'] {
-			  	.testimonials__items { transform: translateX(#{$i * -100%}); }
+			  	.grid-list__items { transform: translateX(#{$i * -100%}); }
 			  }    
 			}
 
 		}
 
-		.testimonials__items {
+		.grid-list__items {
 			display: flex;
 			flex-direction: row;
 			flex-shrink: 0;
@@ -166,7 +170,7 @@ h2 {
 			transition: transform .6s $ease-in-out-quad;
 		}
 
-		.testimonials__item {
+		.grid-list__item {
 			flex:none;
 			margin-top: 0 !important;
 		}
@@ -177,7 +181,7 @@ h2 {
 
 @include breakpoint($grid-sm $grid-sm-max) {
 
-	.testimonials__item {
+	.grid-list__item {
 		&:nth-of-type(odd) {
 			@include span(3 of 6 first); 
 
@@ -197,7 +201,7 @@ h2 {
 
 @include breakpoint($grid-md) {
 
-	.testimonials__container {
+	.grid-list__container {
 		max-width: $grid-lg;
 		margin-left: auto;
 		margin-right: auto;
@@ -205,13 +209,13 @@ h2 {
 		@include rem-value(padding-right, $content-margin);
 	}
 
-	.testimonials__items {
+	.grid-list__items {
 		@include container;
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	.testimonials__item {
+	.grid-list__item {
 		&:nth-of-type(3n+1) {
 			@include span(2 of 6 first); 
 
