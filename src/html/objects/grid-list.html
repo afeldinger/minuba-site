@@ -4,33 +4,33 @@
 			{
 				'title': 'Lorem ipsum',
 				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-				'tags': ['vvs', 'maler']
+				'category': ['tomrer', 'maler']
 			},
 			{
 				'title': 'Lorem ipsum',
 				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-				'tags': ['vvs', 'maler']
+				'category': ['elektriker', 'murer']
 			},
 			{
 				'title': 'Lorem ipsum',
 				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-				'tags': ['vvs', 'maler']
+				'category': ['vvs', 'maler']
 			},
 			{
 				'title': 'Lorem ipsum',
 				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-				'tags': ['vvs', 'maler']
+				'category': ['tomrer', 'snedker']
 			},
 			{
 				'title': 'Lorem ipsum',
 				'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-				'tags': ['vvs', 'maler']
+				'category': ['murer']
 			}
 		]
 	%}
 	<ul class="grid-list__items">
 		{% for item in list_items %}
-		<li class="grid-list__item">
+		<li class="grid-list__item" data-filter-category="{{ item.category | join(', ') }}">
 			<a class="grid-list__link" href="#">
 				<figure class="grid-list__img">
 					<img src="assets/images/samples/logo-skjoedt.jpg" alt="Sample logo" />
@@ -40,7 +40,7 @@
 					{{ item.title }}
 				</h2>
 				<blockquote>
-					<p>{{ item.text }}</p>
+					<p>{{ item.text }} ({{ item.category | join(', ') }})</p>
 					<cite>Contact name</cite>
 				</blockquote>
 			</a>
