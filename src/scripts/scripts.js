@@ -4,6 +4,9 @@
 // jQuery
 window.$ = window.jQuery = require('jquery/dist/jquery');
 
+// Lightslider
+require('lightslider/dist/js/lightslider.min.js');
+
 
 // Objects
 require('objects/site-header');
