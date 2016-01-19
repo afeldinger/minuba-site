@@ -35,10 +35,13 @@
 
 .banner--hero-illustration {
 	background-color: $color-beige;
-	background-position: 50% -30%;
+	background-position: 50% -10%;
 	background-size: 100%;
-	
 	padding-top: 60vw;
+
+	@include breakpoint($grid-xs) {
+		background-position: 50% -30%;
+	}
 
 	@include breakpoint($grid-sm) {
 		background-position: 50% -40%;
