@@ -11,8 +11,8 @@
 	display:none;
 }
 
-span[class^='sprite--minuba-icons-'],
-span[class*=' sprite--minuba-icons-'] {
+span[class^='sprite--minuba-'],
+span[class*=' sprite--minuba-'] {
 	fill: $color-minuba-primary;
 	color: $color-minuba-secondary;
 }

@@ -1,13 +1,50 @@
 
 				{%
-					set features = [1,2,3,4,5,6,7,8,9]
+					set features = [
+						{
+							icon:'timer',
+							title: 'Lorem ipsum'
+						},
+						{
+							icon:'legal',
+							title: 'Lorem ipsum'
+						},
+						{
+							icon:'wrench',
+							title: 'Lorem ipsum'
+						},
+						{
+							icon:'hardhat-tie',
+							title: 'Lorem ipsum'
+						},
+						{
+							icon:'van',
+							title: 'Lorem ipsum dolor sit amet consecuom lorem ipsum dolor'
+						},
+						{
+							icon:'checkmark',
+							title: 'Lorem ipsum'
+						},
+						{
+							icon:'building-2',
+							title: 'Lorem ipsum'
+						},
+						{
+							icon:'mobile',
+							title: 'Lorem ipsum'
+						},
+						{
+							icon:'graph',
+							title: 'Lorem ipsum'
+						}
+					]
 				%}
 				<ul class="feature-list__items">
-					{% for n in features %}
+					{% for item in features %}
 					<li class="feature-list__item">
-						<h2>
-							{{ sprite('minuba-icons-timer', null, 'feature-list__sprite') }}
-							Lorem ipsum
+						<h2 class="feature-list__title">
+							{{ sprite('minuba-icon-' + item.icon, null, 'feature-list__sprite') }}
+							{{ item.title }}
 						</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 						<a class="btn btn--sm" href="#">Læs mere</a>
