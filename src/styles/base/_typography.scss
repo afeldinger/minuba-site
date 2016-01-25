@@ -5,6 +5,7 @@ html {
 	font-size: $font-size-md / 16px * 1em;
 	line-height: $line-height-lg;
 	color: $color-text-body;
+	font-weight: $weight-light;
 	
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -28,15 +29,16 @@ h2,
 
 
 h3 {
-	font-weight: $weight-light;
+	font-weight: $weight-normal;
 	@include rem-value(font-size, $font-size-lg);
-	line-height: $line-height-lg;
+	line-height: $line-height-md;
+	margin: 1.4em 0 .2em;
 }
 
 h4 {
 	font-weight: $weight-normal;
 	@include rem-value(font-size, $font-size-md);
-	line-height: $line-height-lg;
+	line-height: $line-height-md;
 }
 
 p {
@@ -64,6 +66,11 @@ h3,
 	& + figure + p {
 		margin-top:0;	
 	}
+}
+
+strong,
+bold {
+	font-weight: $weight-normal;
 }
 
 blockquote {
@@ -95,13 +102,22 @@ address {
 }
 
 
-
 .size-xl,
 .lead {
 	@include rem-value(font-size, $font-size-xl);
 	line-height: $line-height-md;
 }
 
+.size-sm,
+.small,
+small {
+	@include rem-value(font-size, $font-size-sm);
+	line-height: $line-height-md;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
 
 @mixin text-color($body-color: $color-text-body, $header-color: $color-text-header) {
 	color: $body-color;

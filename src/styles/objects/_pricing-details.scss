@@ -1,0 +1,110 @@
+
+.pricing-details {
+	position: relative;
+	margin: ($content-padding-v * .5) 0;
+	background-color: inherit;
+	height: 1px;
+	background: rgba(0,0,0,.03);
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: '';
+		display:block;
+		width: 100%;
+		height: 1px;
+		top: 0;
+		border-top: 1px solid $color-tonal-gray-2;
+	}
+
+	&:after {
+		top: auto;
+		bottom: 0;
+		border-top: 0;
+		border-bottom: 1px solid $color-tonal-gray-2;
+	}
+}
+
+.pricing-details__toggle {
+	position: absolute;
+	display:inline-block;
+	top: 0;
+	left: 50%;
+	padding: 4px 20px;
+	text-decoration: none;
+	@include rem-value(font-size, $font-size-sm);
+	line-height: default;
+	white-space: nowrap;
+	border-radius: $border-radius;
+
+	&,
+	&:link,
+	&:visited {
+		color: inherit;	
+	}
+	
+
+	transform: translate(-50%, -50%);
+	background-color: $color-tonal-gray-1;
+	z-index: 2;
+
+	
+	&:after {
+		content: '+';
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 1.4em;
+		line-height: 1.4em;
+		font-family: monospace;
+		font-weight: $weight-normal;
+		height: 1.4em;
+		width: 1.4em;
+		color: $color-white;
+		background: $color-text-body;
+		border-radius: .7em;
+		overflow: hidden;
+
+		transition-duration: $duration-fast;
+		transition-property: color background;
+	}
+	&:hover:after {
+		background-color: $color-minuba-secondary;
+	}
+
+	.color--white & {
+		background-color: $color-white;
+	}
+}
+
+.pricing-details__content {
+	max-height: 0;
+	overflow: hidden;
+	padding: $content-margin;
+	//transition: max-height .5s;
+}
+
+// Modifiers
+
+.pricing-details--active {
+	height: auto;
+
+	.pricing-details__toggle {
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	.pricing-details__content {
+		max-height: 999em;
+	}
+
+}
+
+
+@include breakpoint($grid-md) {
+
+	.pricing-details {
+		margin: $content-padding-v 0;
+	}
+
+}

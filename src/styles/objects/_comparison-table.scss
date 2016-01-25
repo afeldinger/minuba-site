@@ -1,0 +1,33 @@
+
+.comparison-table {
+
+	width: 100%;
+	border-collapse: collapse;
+	//border-spacing: 2px;
+	table-layout: fixed;
+
+	tr {
+
+
+		&:nth-child(odd) {
+			background: rgba(255,255,255,.9);
+		}
+		&:nth-child(even) {
+			background: rgba(255,255,255,.6);
+		}
+		
+	}
+
+
+	td, th {
+		padding: 4px 10px;
+
+		&:first-child {
+			width: 50%;
+		}
+		&:nth-child(n+2) {
+			text-align: center;
+		}
+	}
+
+}

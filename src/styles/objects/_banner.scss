@@ -88,11 +88,14 @@
 			margin-top: -0.5 * $content-padding-v;
 		}
 
-		.banner__content {	
-			p {
-				max-width: span(4 of 6);
-				margin-left: auto;
-				margin-right: auto;
+
+		&:not(.banner--text-wide) {
+			.banner__content {
+				> p {
+					max-width: span(4 of 6);
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
 		}
 
@@ -144,6 +147,14 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	.banner--text-wide {
+		.banner__content > p {
+			max-width: span(5 of 6);
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	.banner--size-1 {

@@ -1,0 +1,19 @@
+
+table {
+	margin: 1.4em auto;
+	max-width: 100%;
+}
+
+th,
+td {
+	font-weight: inherit;
+	text-align: left;
+	padding: 2px 8px;
+}
+
+thead {
+	th,
+	td {
+		vertical-align: bottom;
+	}
+}

@@ -1,0 +1,74 @@
+
+{% extends 'layouts/page.html' %}
+
+{% block content %}
+		
+
+	<section class="banner color--white">
+		<div class="banner__container">
+
+
+			<div class="banner__content wysiwyg">
+				<h1>Priser der er til at forstå	</h1>
+				<p class="lead">
+					Vi tror ikke på forskelsbehandling. Hos os får du samme muligheder, stabilitet og hastighed uanset om du har 5 eller 5000 ansatte. <br>
+					Og lige nu er du i gang for bare DKK 249,- pr. måned.
+				</p>
+				<p class="small">
+					Adgang til Minuba kræver minimum én registreret superbruger. Alle priser er eksl. moms
+				</p>
+				
+			</div>
+		</div>
+
+	</section>
+
+	<section class="banner color--default">
+		<div class="banner__container">
+
+
+			<div class="banner__content wysiwyg">
+				<h1>Fra bare DKK 249,- pr. måned</h1>
+				<p class="lead">Alle firmaer har deres eget behov. Derfor kan du selv frit vælge, hvilken sammensætning af brugere, der passer bedst til dit.</p>
+				<p class="lead">Men bare en enkelt bruger er faktisk nok til at komme i gang med at oprette kunder, tilbud og fakturaer</p>
+				
+				
+				{% include 'objects/pricing.html' %}
+
+				{% include 'objects/pricing-details.html' %}
+
+				<div class="pricing-cta cols cols--3">
+					<div class="col">
+						<h2>Prøv gratis i 30 dage</h2>
+					</div>
+					<div class="col">
+						<a class="btn" href="form.html">Prøv gratis</a>
+					</div>
+					<div class="col">
+						Spørgsmål? Ring på <span class="nowrap">+45 7070 2037</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="banner color--white">
+		<div class="banner__container">
+			<div class="banner__content wysiwyg">
+				{% include 'objects/faq-small.html' %}
+
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+{% endblock %}
+
+
+{% block javascript %}
+
+{% endblock %}

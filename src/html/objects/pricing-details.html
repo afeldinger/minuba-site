@@ -1,0 +1,119 @@
+
+{%
+	set features = [
+		{
+			title: 'Timeregistrering',
+			roles: 4
+		},
+		{
+			title: 'Tilbudsmodul',
+			roles: 4
+		},
+		{
+			title: 'Ordremodul',
+			roles: 4
+		},
+		{
+			title: 'Planlægning',
+			roles: 2
+		},
+		{
+			title: 'Fakturamodul',
+			roles: 2
+		},
+		{
+			title: 'Arbejdsseddel',
+			roles: 3
+		},
+		{
+			title: 'Bestykning/materialeliste',
+			roles: 3
+		},
+		{
+			title: 'Leverrandørers varekatalog med avancer',
+			roles: 1
+		},
+		{
+			title: 'Prissammenligning',
+			roles: 2
+		},
+		{
+			title: 'Dokumentationsmodul',
+			roles: 2
+		},
+		{
+			title: 'Ledelsesoverblik',
+			roles: 1
+		},
+		{
+			title: 'Lovpligtige kvalitetsikringsdokumenter',
+			roles: 3
+		},
+		{
+			title: 'Varekatalog med egne varer og stregkoder',
+			roles: 2
+		},
+		{
+			title: 'Gratis mobil app (iOS, Android)',
+			roles: 3
+		},
+		{
+			title: 'Tilbudsskabeloner',
+			roles: 4
+		},
+		{
+			title: 'Integration til regnskabssystem',
+			roles: 4
+		},
+		{
+			title: 'Kunde- og adresse kartotek',
+			roles: 4
+		},
+		{
+			title: 'Rykkerstyring',
+			roles: 4
+		},
+		{
+			title: 'Fairsupport',
+			roles: 4
+		},
+		{
+			title: 'Tilfredsheds garanti',
+			roles: 4
+		}
+	]
+%}
+<div id="pricing-details" class="pricing-details">
+
+	<a href="#pricing-details" class="pricing-details__toggle">Flere detaljer om brugertyperne</a>
+	<div class="pricing-details__content">
+		
+
+		<table class="comparison-table">
+			<thead>
+				<tr>
+					<th>Feature</th>
+					<th>Superbruger</th>
+					<th>Bruger</th>
+					<th>Begrænset bruger</th>
+					<th>Ressource</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for item in features %}
+				<tr>
+					<th>{{ item.title }}</th>
+					<td>{{ "x" if item.roles >= 1 else "&nbsp;" }}</td>
+					<td>{{ "x" if item.roles >= 2 else "&nbsp;" }}</td>
+					<td>{{ "x" if item.roles >= 3 else "&nbsp;" }}</td>
+					<td>{{ "x" if item.roles >= 4 else "&nbsp;" }}</td>
+				</tr>
+			{% endfor %}	
+			</tbody>
+
+		</table>
+
+
+	</div>
+
+</div>

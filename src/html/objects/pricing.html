@@ -1,0 +1,52 @@
+
+{%
+	set usertypes = [
+		{
+			icon:'man-hardhat-tie',
+			title: 'Superbruger',
+			text: 'Adgang til at konfigurere systemet og oprette nye brugere.',
+			price: '249',
+			class: 'pricing__item--required'
+		},
+		{
+			icon:'man',
+			title: 'Bruger',
+			text: 'Adgang til at oprette ordrer, planlægge eller fakturere. Du styrer rettighederne.',
+			price: '149',
+			class: ''
+		},
+		{
+			icon:'man-timer',
+			title: 'Begrænset bruger',
+			text: 'Basal adgang til arbejdssedler, kvalitetssikring og timeregistrering.',
+			price: '79',
+			class: ''
+		},
+		{
+			icon:'excavator-2',
+			title: 'Ressource',
+			text: 'Adgang til at oprette ordrer, planlægge eller fakturere. Du styrer rettighederne.',
+			price: '29',
+			class: 'pricing__item--secondary'
+		}
+	]
+%}
+<div class="pricing">
+
+	{% for item in usertypes %}
+	<div class="pricing__item {{ item.class }}">
+		<h2 class="pricing__title">
+			{{ sprite('minuba-icon-' + item.icon, null, 'pricing__sprite') }}
+			{{ item.title }}
+		</h2>
+		<p>{{ item.text }}</p>
+
+		<div class="pricing__price">
+			<p>DKK {{ item.price }}</p>
+			<p class="small">pr. bruger pr. måned</p>
+		</div>
+	</div>
+	{% endfor %}
+
+
+</div>

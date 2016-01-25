@@ -36,7 +36,6 @@
 .feature-list__title {
 	@include rem-value(font-size, $font-size-lg);
 
-	
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -44,8 +43,8 @@
 }
 
 .feature-list__sprite {
-	width: 2.6em;
-	height: 2.6em;
+	@include rem-value(width, $icon-size-md);
+	@include rem-value(height, $icon-size-md);
 	margin-right: .5em;
 	vertical-align: middle;
 

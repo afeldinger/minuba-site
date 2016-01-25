@@ -1,0 +1,31 @@
+
+.pricing-cta {
+	margin-top: .5 * $content-padding-v;
+	background: url('../images/sprites.svg#minuba-icon-van');
+	
+	.col {
+		text-align: center;
+		margin: 1em 0;
+		@include rem-value(font-size, $font-size-lg);
+	}
+}
+
+@include breakpoint($grid-md) {
+	.pricing-cta {
+		margin-top: $content-padding-v;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		.col {
+			margin: 0;
+			flex:none;
+		}
+
+		.btn {
+			width: 100%;
+		}
+	}
+}

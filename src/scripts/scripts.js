@@ -13,3 +13,4 @@ require('objects/site-header');
 require('objects/form-fields');
 require('objects/list-filter');
 require('objects/slider');
+require('objects/pricing-details');
