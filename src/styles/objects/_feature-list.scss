@@ -53,8 +53,6 @@
 }
 
 
-
-
 @include breakpoint($grid-sm) {
 	.feature-list__items {
 		@include container;

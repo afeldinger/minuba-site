@@ -2,32 +2,78 @@
 .comparison-table {
 
 	width: 100%;
-	border-collapse: collapse;
-	//border-spacing: 2px;
+	border-collapse: separate;
+	border-spacing: 2px;
 	table-layout: fixed;
 
-	tr {
-
-
-		&:nth-child(odd) {
-			background: rgba(255,255,255,.9);
-		}
-		&:nth-child(even) {
-			background: rgba(255,255,255,.6);
-		}
-		
-	}
+	@include rem-value(font-size, $font-size-md);
+	line-height: normal;
 
 
 	td, th {
-		padding: 4px 10px;
+		padding: 6px 12px;
+		background: rgba(0,0,0,.03);
 
 		&:first-child {
 			width: 50%;
 		}
 		&:nth-child(n+2) {
 			text-align: center;
+			background: $color-white;
 		}
 	}
 
+	.symbol {
+		color: $color-minuba-primary;
+	}
+}
+
+.comparison-table__header-row {
+	@extend .thead;
+
+	td, th {
+		font-weight: $weight-normal;
+
+		&:nth-child(n+2) {
+			@include rem-value(font-size, $font-size-sm);
+			vertical-align: top;
+		}
+	}
+}
+.comparison-table__feature-row {
+
+}
+
+@include breakpoint(0 $grid-sm-max) {
+	.comparison-table {
+
+		tr, td, th {
+	        display: block;
+	        margin: 0 auto;
+	        width: 100%;
+	        overflow: hidden;
+	        float: left;
+	        border-spacing: 0;
+	        table-layout: auto;
+		}
+			
+		td, th {
+			&:first-child {
+				width: 100%;
+			}
+			&:nth-child(n+2) {
+				width: 25%;
+			}
+		}
+
+	}
+
+
+	.comparison-table__header-row {
+		td, th {
+			&:first-child {
+				display:none;
+			}
+		}
+	}
 }

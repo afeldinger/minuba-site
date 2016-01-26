@@ -1,6 +1,6 @@
 
 .pricing {
-	@include container();
+	margin: 2em 0;
 	overflow: hidden;
 	clear: both;
 }
@@ -126,8 +126,7 @@
 		.pricing__sprite {
 			position: absolute; 
 			top: $content-margin;
-			left: 0;
-			width: .5 * span(2 of 6 first);
+			left: .8 * gutter();
 		}
 
 		.pricing__title + p {

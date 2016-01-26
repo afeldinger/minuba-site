@@ -4,7 +4,6 @@
 	margin: ($content-padding-v * .5) 0;
 	background-color: inherit;
 	height: 1px;
-	background: rgba(0,0,0,.03);
 
 	&:before,
 	&:after {
@@ -79,8 +78,14 @@
 .pricing-details__content {
 	max-height: 0;
 	overflow: hidden;
-	padding: $content-margin;
 	//transition: max-height .5s;
+}
+
+.pricing-details__sprite {
+	display:block;
+	@include rem-value(width, $icon-size-sm);
+	@include rem-value(height, $icon-size-sm);
+	margin: 0 auto .5em;
 }
 
 // Modifiers

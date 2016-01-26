@@ -119,6 +119,10 @@ small {
 	white-space: nowrap;
 }
 
+.symbol {
+	font-family: "Lucida Console", monospace;
+}
+
 @mixin text-color($body-color: $color-text-body, $header-color: $color-text-header) {
 	color: $body-color;
 

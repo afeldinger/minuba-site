@@ -83,34 +83,41 @@
 		}
 	]
 %}
-<div id="pricing-details" class="pricing-details">
+<div id="pricing-details" class="pricing-details pricing-details--active">
 
 	<a href="#pricing-details" class="pricing-details__toggle">Flere detaljer om brugertyperne</a>
 	<div class="pricing-details__content">
 		
 
 		<table class="comparison-table">
-			<thead>
-				<tr>
-					<th>Feature</th>
-					<th>Superbruger</th>
-					<th>Bruger</th>
-					<th>Begrænset bruger</th>
-					<th>Ressource</th>
-				</tr>
-			</thead>
-			<tbody>
-			{% for item in features %}
-				<tr>
-					<th>{{ item.title }}</th>
-					<td>{{ "x" if item.roles >= 1 else "&nbsp;" }}</td>
-					<td>{{ "x" if item.roles >= 2 else "&nbsp;" }}</td>
-					<td>{{ "x" if item.roles >= 3 else "&nbsp;" }}</td>
-					<td>{{ "x" if item.roles >= 4 else "&nbsp;" }}</td>
-				</tr>
-			{% endfor %}	
-			</tbody>
-
+			<tr class="comparison-table__header-row">
+				<th>Feature</th>
+				<th>
+					{{ sprite('minuba-icon-man-hardhat-tie', null, 'pricing-details__sprite') }}
+					Superbruger
+				</th>
+				<th>
+					{{ sprite('minuba-icon-man', null, 'pricing-details__sprite') }}
+					Bruger
+				</th>
+				<th>
+					{{ sprite('minuba-icon-man-timer', null, 'pricing-details__sprite') }}
+					Begrænset bruger
+				</th>
+				<th>
+					{{ sprite('minuba-icon-excavator-2', null, 'pricing-details__sprite') }}
+					Ressource
+				</th>
+			</tr>
+		{% for item in features %}
+			<tr class="comparison-table__feature-row">
+				<th>{{ item.title }}</th>
+				<td><span class="symbol">{{ "&check;" if item.roles >= 1 else "&nbsp;" }}</span></td>
+				<td><span class="symbol">{{ "&check;" if item.roles >= 2 else "&nbsp;" }}</span></td>
+				<td><span class="symbol">{{ "&check;" if item.roles >= 3 else "&nbsp;" }}</span></td>
+				<td><span class="symbol">{{ "&check;" if item.roles >= 4 else "&nbsp;" }}</span></td>
+			</tr>
+		{% endfor %}
 		</table>
 
 
