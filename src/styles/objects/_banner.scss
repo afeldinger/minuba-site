@@ -93,6 +93,10 @@
 		}
 		.banner__img {
 			@include span(3 of 6 last);
+
+			.sprite {
+				right: 0;
+			}
 		}
 		.banner__content {
 
@@ -107,6 +111,7 @@
 			@include span(3 of 6 first);
 
 		}
+
 	}
 
 	.banner--text-right {
@@ -114,10 +119,16 @@
 			@include span(3 of 6 first);
 			text-align: right;
 			direction: rtl;
+			
+			.sprite {
+				left: 0;
+				right: auto;
+			}
 		}
 		.banner__content {
 			@include span(3 of 6 last);
 		}
+
 	}
 
 	.banner--vertical-center {
