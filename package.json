@@ -74,6 +74,7 @@
     "pretty-hrtime": "~1.0.0",
     "require-dir": "^0.3.0",
     "susy": "^2.2.6",
+    "svg4everybody": "^2.0.1",
     "vinyl-source-stream": "~1.1.0",
     "webpack": "^1.12.9"
   },
