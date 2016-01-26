@@ -1,0 +1,37 @@
+
+// Custom banners
+
+.banner--hero-illustration {
+	background-color: $color-beige;
+	background-position: 50% -12%;
+	background-size: 100%;
+	padding-top: 60vw;
+
+	@include breakpoint($grid-xs) {
+		background-position: 50% -30%;
+	}
+
+	@include breakpoint($grid-sm) {
+		background-position: 50% -40%;
+		background-size: 90%;
+	}
+
+	@include breakpoint($grid-md) {
+		background-size: auto;
+		background-position: 50% 40px;
+		padding-top: 0;
+		padding-bottom: 200px;
+	}
+
+}
+
+.banner--hero-pricing {
+	background-size: auto;
+	background-position: 50% 100%;
+	padding-bottom: 180px;
+
+	@include breakpoint($grid-md) {
+		padding-bottom: 150px;
+	}
+
+}
