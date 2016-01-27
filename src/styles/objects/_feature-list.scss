@@ -64,12 +64,15 @@
 
 @include breakpoint($grid-sm $grid-sm-max) {
 	.feature-list__item {
+		@include gallery(3 of 6);
+		/*
 		&:nth-of-type(odd) {
 			@include span(3 of 6 first); 
 		}
 		&:nth-of-type(even) {
 			@include span(3 of 6 last); 
 		}
+		*/
 		&:nth-of-type(n+3) {
 			margin-top: 3em;
 		}
@@ -79,6 +82,8 @@
 @include breakpoint($grid-md) {
 
 	.feature-list__item {
+		@include gallery(2 of 6);
+		/*
 		&:nth-of-type(3n+1) {
 			@include span(2 of 6 first); 
 		}
@@ -88,6 +93,7 @@
 		&:nth-of-type(3n+3) {
 			@include span(2 of 6 last); 
 		}
+		*/
 		&:nth-of-type(n+4) {
 			margin-top: 3em;
 		}

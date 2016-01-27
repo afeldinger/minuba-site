@@ -187,7 +187,9 @@ h2 {
 @include breakpoint($grid-sm $grid-sm-max) {
 
 	.grid-list__item {
-		&:nth-of-type(odd) {
+		@include gallery(3 of 6);
+		/*
+		&:nth-of-type(2n+1) {
 			@include span(3 of 6 first); 
 			clear: left;
 
@@ -195,12 +197,15 @@ h2 {
 				display: none;
 			}
 		}
-		&:nth-of-type(even) {
+		&:nth-of-type(2n+2) {
 			@include span(3 of 6 last); 
 		}
+		*/
+		
 		&:nth-of-type(n+3) {
 			margin-top: gutter();
 		}
+		
 	}
 
 }
@@ -222,6 +227,8 @@ h2 {
 	}
 
 	.grid-list__item {
+		@include gallery(2 of 6);
+		/*
 		&:nth-of-type(3n+1) {
 			@include span(2 of 6 first); 
 			clear: left;
@@ -236,9 +243,11 @@ h2 {
 		&:nth-of-type(3n+3) {
 			@include span(2 of 6 last); 
 		}
+		*/
 		&:nth-of-type(n+4) {
 			margin-top: gutter();
 		}
+
 	}
 
 }
