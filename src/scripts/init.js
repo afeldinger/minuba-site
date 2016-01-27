@@ -13,5 +13,5 @@ require('browsernizr');
 //var Modernizr = window.Modernizr = require('browsernizr');
 
 // svg4everybody
-require('svg4everybody/dist/svg4everybody');
+var svg4everybody = require('svg4everybody/dist/svg4everybody');
 svg4everybody();
