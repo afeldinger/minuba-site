@@ -6,12 +6,12 @@
 							</div>
 							<div class="field">
 								<label class="field__label" for="full-name">Navn</label>
-								<input class="field__input" id="full-name" type="text" name="full-name" required>
+								<input class="field__input" id="full-name" type="text" name="full-name" data-rule-minlength="2" data-msg-minlength="Mindst 2 bogstaver" required>
 							</div>
 							<div class="form-row">
 								<div class="field grid-sm--1-2">
 									<label class="field__label" for="email">Email</label>
-									<input class="field__input" id="email" type="email" name="email" required>
+									<input class="field__input" id="email" type="email" name="email" data-rule-email="true" data-msg-email="Ugyldig e-mail" required>
 								</div>
 								<div class="field grid-sm--1-2">
 									<label class="field__label" for="phone">Telefon</label>

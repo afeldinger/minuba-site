@@ -4,45 +4,47 @@
 
 
 $(function() {
-	$('form').validate({
-		highlight: function(element, errorClass, validClass) {
-            if(element.type === 'radio') {
-                $(element.form).find('[name="' + element.name + '"]').each(function(){
-                    var $this = $(this);
-                    $this.addClass(errorClass).removeClass(validClass);
-                    $this.closest('.field').addClass('field--' + errorClass);
-                });
-            } else {
-				$(element).addClass(errorClass).removeClass(validClass);
-				$(element).closest('.field').addClass('field--' + errorClass);
-            }
+	$('form').each(function() {
+		$(this).validate({
+			highlight: function(element, errorClass, validClass) {
+	            if(element.type === 'radio') {
+	                $(element.form).find('[name="' + element.name + '"]').each(function(){
+	                    var $this = $(this);
+	                    $this.addClass(errorClass).removeClass(validClass);
+	                    $this.closest('.field').addClass('field--' + errorClass);
+	                });
+	            } else {
+					$(element).addClass(errorClass).removeClass(validClass);
+					$(element).closest('.field').addClass('field--' + errorClass);
+	            }
 
-		},
-		unhighlight: function(element, errorClass, validClass) {
-            if(element.type === 'radio') {
-                $(element.form).find('[name="' + element.name + '"]').each(function(){
-                    var $this = $(this);
-                    $this.removeClass(errorClass).addClass(validClass);
-                    $this.closest('.field').removeClass('field--' + errorClass);
-                });
-            } else {
-				$(element).removeClass(errorClass).addClass(validClass);
-				$(element).closest('.field').removeClass('field--' + errorClass);
-			}
-		},
-		errorPlacement: function(error, element) {
-			//return true; // Disable error messages entirely
-			if (element.is('select')) {
-				error.insertAfter(element.closest('.field__select__wrapper'));
-			} else {
-				error.insertAfter(element);
-			}
-		},
-		/*
-		submitHandler: function() {
+			},
+			unhighlight: function(element, errorClass, validClass) {
+	            if(element.type === 'radio') {
+	                $(element.form).find('[name="' + element.name + '"]').each(function(){
+	                    var $this = $(this);
+	                    $this.removeClass(errorClass).addClass(validClass);
+	                    $this.closest('.field').removeClass('field--' + errorClass);
+	                });
+	            } else {
+					$(element).removeClass(errorClass).addClass(validClass);
+					$(element).closest('.field').removeClass('field--' + errorClass);
+				}
+			},
+			errorPlacement: function(error, element) {
+				//return true; // Disable error messages entirely
+				if (element.is('select')) {
+					error.insertAfter(element.closest('.field__select__wrapper'));
+				} else {
+					error.insertAfter(element);
+				}
+			},
+			/*
+			submitHandler: function() {
 
-		}
-		*/
+			}
+			*/
+		});
 	});
 
 	// required fields
