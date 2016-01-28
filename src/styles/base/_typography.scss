@@ -11,35 +11,76 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-.h1 {
+
+%header-xxl {
 	font-weight: $weight-light;
 	@include rem-value(font-size, $font-size-xxl);
 	line-height: $line-height-md;
 	margin: .6em 0;
+
+
+	& + p,
+	& + figure,
+	& + figure + p {
+		margin-top: 1em;
+	}
 }
 
-h2,
-.h2 {
+%header-xl {
 	font-weight: $weight-light;
 	@include rem-value(font-size, $font-size-xl);
 	line-height: $line-height-md;
 	margin: 1.4em 0 .4em;
 }
 
-
-h3 {
+%header-lg {
 	font-weight: $weight-normal;
 	@include rem-value(font-size, $font-size-lg);
 	line-height: $line-height-md;
 	margin: 1.4em 0 .2em;
 }
 
-h4 {
+%header-xl,
+%header-lg {
+	& + p,
+	& + figure,
+	& + figure + p {
+		margin-top:0;	
+	}
+}
+
+%header-md {
+
 	font-weight: $weight-normal;
 	@include rem-value(font-size, $font-size-md);
 	line-height: $line-height-md;
 }
+
+.h1,
+h1,
+h2 {
+	@extend %header-xxl;
+}
+
+.h2,
+h1 ~ h2,
+h3 {
+	@extend %header-xl;
+}
+
+.h3,
+h1 ~ h3,
+h4 {
+	@extend %header-lg;
+}
+
+.h4,
+.h5,
+h4, 
+h5 {
+	@extend %header-md;
+}
+
 
 p {
 	margin: 1.6em 0;
@@ -48,25 +89,6 @@ p {
 
 }
 
-h1,
-.h1 {
-	& + p,
-	& + figure,
-	& + figure + p {
-		margin-top: 1em;
-	}
-}
-
-h2,
-.h2,
-h3,
-.h3 {
-	& + p,
-	& + figure,
-	& + figure + p {
-		margin-top:0;	
-	}
-}
 
 strong,
 bold {
@@ -82,16 +104,17 @@ time {
 	font-style: italic;
 	@include rem-value(font-size, $font-size-sm);
 
-	h1 + & {
+	%header-xxl + & {
 		position:relative;
 		top: -1.7em;
 	}
-	h2 + & {
+	%header-xl + & {
 		margin-top: -.5em;
 	}
 
 	& + h1,
 	& + h2,
+	& + h3,
 	& + p {
 		margin-top: 0;
 	}
@@ -127,9 +150,8 @@ small {
 	color: $body-color;
 
 	h1,
-	.h1,
 	h2,
-	.h2 {
+	h3 {
 		color: $header-color;
 	}
 }
@@ -164,8 +186,7 @@ small {
 }
 
 @include breakpoint($grid-sm) {
-	h1,
-	.h1 {
+	%header-xxl {
 		@include rem-value(font-size, $font-size-xxl-lg);
 
 	}

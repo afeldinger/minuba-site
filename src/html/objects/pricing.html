@@ -35,10 +35,10 @@
 
 	{% for item in usertypes %}
 	<div class="pricing__item {{ item.class }}">
-		<h2 class="pricing__title">
+		<h3 class="pricing__title">
 			{{ sprite('minuba-icon-' + item.icon, null, 'pricing__sprite') }}
 			{{ item.title }}
-		</h2>
+		</h3>
 		<p>{{ item.text }}</p>
 
 		<div class="pricing__price">

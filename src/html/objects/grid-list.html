@@ -28,6 +28,8 @@
 			}
 		]
 	%}
+
+
 	<ul class="grid-list__items">
 		{% for item in list_items %}
 		<li class="grid-list__item" data-filter-category="{{ item.category | join(', ') }}">
@@ -36,9 +38,9 @@
 					<img src="assets/images/samples/logo-skjoedt.jpg" alt="Sample logo" />
 				</figure>
 
-				<h2 class="grid-list__title">
+				<h3 class="grid-list__title">
 					{{ item.title }}
-				</h2>
+				</h3>
 				<blockquote>
 					<p>{{ item.text }} ({{ item.category | join(', ') }})</p>
 					<cite>Contact name</cite>
