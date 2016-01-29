@@ -13,6 +13,8 @@ $(function() {
 
 (function() {
 
+	var polyfill = /\bEdge\/12\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537;
+	if (!polyfill) return;
 
 	var uses = document.getElementsByTagName("use"),
 		sprites = {};
