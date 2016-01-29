@@ -11,7 +11,3 @@ require('browsernizr/test/css/flexboxlegacy'); // Used for positioning
 
 require('browsernizr');
 //var Modernizr = window.Modernizr = require('browsernizr');
-
-// svg4everybody
-var svg4everybody = require('svg4everybody/dist/svg4everybody');
-svg4everybody();
