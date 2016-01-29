@@ -11,22 +11,40 @@ $(function() {
 });
 */
 
-	var sprites = {};
-	var re_sprite = /^[^#$]*/gi;
-	$('use').each(function() {
-		var url = $(this).attr('xlink:href').match(re_sprite)[0];
-		sprites[url] = url;
-	});
+(function() {
 
 
-	$.each(sprites, function() {
-		var ajax = new XMLHttpRequest();
-		ajax.open("GET", this, true);
-		ajax.send();
-		ajax.onload = function(e) {
-		  var div = document.createElement("div");
-		  div.innerHTML = ajax.responseText;
-		  document.body.insertBefore(div, document.body.childNodes[0]);
+	var uses = document.getElementsByTagName("use"),
+		sprites = {};
+
+	for (var use, i = 0; i < uses.length; i++ ) {
+		use = uses[i];
+		var src = use.getAttribute("xlink:href");
+		var url = src.split("#"), url_root = url[0], url_hash = url[1];
+		sprites[url_root] || (sprites[url_root] = []), sprites[url_root].push([ use, url_hash ]);
+	};
+
+	for(var sprite in sprites) {
+		var xhr = new XMLHttpRequest();
+		xhr.uses = sprites[sprite];
+		xhr.open("GET", sprite, true);
+
+		xhr.onreadystatechange = function(e) {
+			if (xhr.readyState === 4) {
+				var x = document.createElement("x");
+				x.style.display = 'none';
+				x.innerHTML = xhr.responseText;
+				document.body.insertBefore(x, document.body.childNodes[0]);
+
+				// Pass through and change references
+				for (var use, i = 0; i < xhr.uses.length; i++) {
+					use = xhr.uses[i][0], use.setAttribute("xlink:href", "#" + xhr.uses[i][1]);
+				}
+			}
 		}
 
-	});
+		xhr.send();
+
+	};
+
+})();
